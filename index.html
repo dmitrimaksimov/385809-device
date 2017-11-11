@@ -34,21 +34,21 @@
 		<!-- главное меню -->
 		<nav class="header-main-navigation">
 			<ul>
-				<li><a class="active-effects__black" href="catalog.html">Каталог товаров<span></span></a>
+				<li><a class="active-effects__black" href="catalog.html" aria-haspopup="true">Каталог товаров<span></span></a>
 					<!-- выпадающее подменю -->
 					<div class="main-navigation__sub__menu">
 						<ul class="sub-menu-column-1">
-							<li><a class="active-effects__black" href="#">Виртуальная реальность</a></li>
-							<li><a class="active-effects__black" href="#">Моноподы для селфи</a></li>
-							<li><a class="active-effects__black" href="#">Экшн-камеры</a></li>
+							<li><a class="active-effects__black" href="#" tabindex="-1">Виртуальная реальность</a></li>
+							<li><a class="active-effects__black" href="#" tabindex="-1">Моноподы для селфи</a></li>
+							<li><a class="active-effects__black" href="#" tabindex="-1">Экшн-камеры</a></li>
 						</ul>
 						<ul class="sub-menu-column-2">
-							<li><a class="active-effects__black" href="#">Фитнес-браслеты</a></li>
-							<li><a class="active-effects__black" href="#">Умные часы</a></li>
+							<li><a class="active-effects__black" href="#" tabindex="-1">Фитнес-браслеты</a></li>
+							<li><a class="active-effects__black" href="#" tabindex="-1">Умные часы</a></li>
 						</ul>
 						<ul class="sub-menu-column-3">
 							<li>
-								<a class="active-effects__black" href="#">Квадрокоптеры</a>
+								<a class="active-effects__black" href="#" tabindex="-1">Квадрокоптеры</a>
 							</li>
 						</ul>
 					</div>
@@ -68,9 +68,9 @@
 			<input type="radio" id="radio-btn-2" name="toggle-promo">
 			<input type="radio" id="radio-btn-3" name="toggle-promo">
 			<div class="promo-slider-controls">
-				<label for="radio-btn-1"></label>
-				<label for="radio-btn-2"></label>
-				<label for="radio-btn-3"></label>	
+				<label  class="visually-hidden" for="radio-btn-1">Самая длинная палка для селфи</label>
+				<label  class="visually-hidden" for="radio-btn-2">Мотивирующие фитнес-браслеты</label>
+				<label  class="visually-hidden" for="radio-btn-3">Квадрокоптер с лазером</label>	
 			</div>
 			<div class="promo-slider-frame"><!-- "окно" для показа слайда -->
 				<div class="promo-slader-slides"><!-- "плёнка" из трёх слайдов -->
@@ -90,9 +90,9 @@
 								<td>Карбон</td>
 							</tr>
 							<tr>
-								<td>Длина палки</td>
-								<td>Вес палки</td>
-								<td>Материал</td>
+								<th scope="col">Длина палки</th>
+								<th scope="col">Вес палки</th>
+								<th scope="col">Материал</th>
 							</tr>
 						</table>
 					</div>
@@ -112,9 +112,9 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td>Без подзарядки</td>
-								<td></td>
-								<td></td>
+								<th scope="col">Без подзарядки</th>
+								<th></th>
+								<th></th>
 							</tr>
 						</table>
 					</div>
@@ -134,9 +134,9 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td>Дальность полета</td>
-								<td>Радиус поражения</td>
-								<td></td>
+								<th scope="col">Дальность полета</th>
+								<th scope="col">Радиус поражения</th>
+								<th></th>
 							</tr>
 						</table>
 					</div>
@@ -150,17 +150,17 @@
 				<li>
 					<a href="#">
 						<div class="categories-item">
-							<img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
+							<img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">						
+							<h3>Виртуальная реальность</h3>
 						</div>
-						<h3>Виртуальная реальность</h3>
 					</a>
 				</li>
 				<li>
 					<a href="#">
 						<div class="categories-item">
-							<img src="img/popular-2.svg" alt="Моноподы для селфи" width="86" height="117">
+							<img src="img/popular-2.svg" alt="Моноподы для селфи" width="86" height="117">						
+							<h3>Моноподы для селфи</h3>
 						</div>
-						<h3>Моноподы для селфи</h3>
 					</a>
 				</li>
 				<li>
@@ -235,10 +235,10 @@
 		<section class="logotypes container">
 			<h2 class="visually-hidden">Популярные бренды</h2>
 			<ul><!-- !!!!!!!! картинку скорее всего надо будет делать фоном - серая меняется на цветную !!!!!!!!!!!!!!! -->
-				<li><a href=""><img src="img/logo-1-grey.png" alt="logo-1" width="260" height="100"></a></li>
-				<li><a href=""><img src="img/logo-2-grey.png" alt="logo-2" width="260" height="100"></a></li>
-				<li><a href=""><img src="img/logo-3-grey.png" alt="logo-3" width="260" height="100"></a></li>
-				<li><a href=""><img src="img/logo-4-grey.png" alt="logo-4" width="260" height="100"></a></li>
+				<li><a href=""><img src="img/logo-1-grey.png" alt="logo-1" width="260" height="100">SZ DJI Technology Co.</a></li>
+				<li><a href=""><img src="img/logo-2-grey.png" alt="logo-2" width="260" height="100">SP Gadgets</a></li>
+				<li><a href=""><img src="img/logo-3-grey.png" alt="logo-3" width="260" height="100">GoPro</a></li>
+				<li><a href=""><img src="img/logo-4-grey.png" alt="logo-4" width="260" height="100">HTC Vive</a></li>
 			</ul>
 		</section>
 		
@@ -262,7 +262,9 @@
 				<h2>Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. 
 				Всякое бывает.</p>
-				<img src="img/map.jpg" alt="Как к нам пройти" width="560" height="222">
+				<a class="open-map-big">
+					<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222">
+				</a>
 				<a class="active-effects__yellow" href="#">напишите нам</a>
 			</section>
 		</section>
@@ -272,12 +274,12 @@
 	<footer class="main-footer">
 		<section class="footer-top-panel">
 			<h2 class="visually-hidden">Авторизация, сравнение товаров, корзина</h2>
-			<a class="logo-footer">device</a>
+			<a class="logo-footer active-effects__footer-logo">device</a>
 			<div class="footer-top-panel__navigation">
 				<ul>
 					<li>
-						<a class="footer-user-auth active-effects__white" href="#">Войти</a>
-					</li>	
+						<a class="footer-user-login active-effects__white" href="#">Войти</a>
+					</li>
 				</ul>
 				<a class="footer-compare active-effects__white" href="#">Сравнить</a>
 				<a class="footer-cart active-effects__white" href="#">Корзина</a>
@@ -303,30 +305,39 @@
 				<li><a href="#" title="Инстаграм">Инстаграм</a></li>
 				<li><a href="#" title="Твиттер">Твиттер</a></li>
 			</ul>
-			<a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss" title="курс Базовый HTML и CSS">HTML Academy</a>
+			<a class="logo-academy active-effects__footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" title="курс Базовый HTML и CSS">HTML Academy</a>
 		</section>
 	</footer>
 	
 	<!-- модальное окно НАПИШИТЕ НАМ -->
 		<section class="modal-write-us">
-			<h2 class="visually-hidden">Напишите нам</h2>
-			<button class="modal-close" type="button" title="закрыть окно">x</button>
+			<h2 class="visually-hidden">Напишите нам</h2>			
 			<form class="write-us" action="#" method="post">
-				<label for="user-name">Ваше имя:</label>
-				<input type="text" name="user-name" id="user-name" 
-				placeholder="Представьтесь, пожалуйста" required autofocus pattern=[A-Za-zА-Яа-яЁё]>
-				<label for="user-email">Ваш e-mail:</label>
-				<input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа" required>
-				<label for="user-letter">Текст письма:</label>
-				<textarea name="user-letter" id="user-letter">В свободной форме</textarea>
-				<input class="active-effects__yellow" type="submit" value="Отправить">
+				<p>
+					<label for="user-name">Ваше имя:</label>
+					<input type="text" name="user-name" id="user-name" 
+					placeholder="Представьтесь, пожалуйста" required aria-required="true" autofocus pattern=[A-Za-zА-Яа-яЁё]>
+				</p>
+				<p>
+					<label for="user-email">Ваш e-mail:</label>
+					<input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа" required aria-required="true">
+				</p>
+				<p>
+					<label for="user-letter">Текст письма:</label>
+					<textarea name="user-letter" id="user-letter">В свободной форме</textarea>
+				</p>
+				<button class="active-effects__yellow" type="submit">Отправить</button>
 			</form>
+			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
 		</section>
 		
 		<!-- модальное окно КАРТА -->
 		<section class="modal-map">
 			<h2 class="visually-hidden">Как до нас добраться</h2>
-			<button class="modal-close" type="button" title="закрыть окно">x</button>
+			<a class="modal-map" href="#">
+				<img src="#" alt="г. Москва, ул. Строителей, 15" width="960" height="559">
+			</a>
+			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
 		</section>
 
 	<script src="js/script.js"></script>
