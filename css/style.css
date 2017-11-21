@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Gilroy";
     src: local("Gilroy Light"),
-		url("fonts/gilroylight.woff2") format("woff2"),
-		url("fonts/gilroylight.woff") format("woff");
+		url("../fonts/gilroylight.woff2") format("woff2"),
+		url("../fonts/gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
     font-family: "Gilroy";
     src: local("Gilroy ExtraBold"),
-		url("fonts/gilroyextrabold.woff2") format("woff2"),
-		url("fonts/gilroyextrabold") format("woff");
+		url("../fonts/gilroyextrabold.woff2") format("woff2"),
+		url("../fonts/gilroyextrabold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
     font-family: "Open Sans";
     src: local("Open Sans"),
-		url("fonts/opensans.woff2") format("woff2"),
-		url("fonts/opensans.woff") format("woff");
+		url("../fonts/opensans.woff2") format("woff2"),
+		url("../fonts/opensans.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -28,8 +28,8 @@
 @font-face {
     font-family: "Open Sans";
     src: local("Open Sans Light"),
-		url("fonts/opensanslight.woff2") format("woff2"),
-		url("fonts/opensanslight") format("woff");
+		url("../fonts/opensanslight.woff2") format("woff2"),
+		url("../fonts/opensanslight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
@@ -82,35 +82,36 @@ img {
 
 /* ===  эффекты при наведении и клике  === */
 
-.active-effects__black:hover,
-.active-effects__black:focus {
+.active-effects-black:hover,
+.active-effects-black:focus {
 	opacity: 0.6;
 	cursor: pointer;
  }
  
-  .active-effects__black:active {
+  .active-effects-black:active {
 	opacity: 0.3;
 	cursor: pointer;
  }
 
-.active-effects__yellow:hover,
-.active-effects__yellow:focus {
+.active-effects-yellow:hover,
+.active-effects-yellow:focus {
+	background-image: none;
 	background-color: #f0c52e;
 }
 
-.active-effects__yellow:active {
+.active-effects-yellow:active {
 	color: rgba(0, 0, 0, 0.3);
 	
 	background-color: #f0c52e;
 }
 
-.active-effects__white:hover,
-.active-effects__white:focus {
+.active-effects-white:hover,
+.active-effects-white:focus {
 	opacity: 0.6;
 	cursor: pointer;
 }
 
-.active-effects__white:active {
+.active-effects-white:active {
 	opacity: 0.3;
 	cursor: pointer;
 }
@@ -121,9 +122,9 @@ img {
 	position: relative;
 	
 	width: 1160px;
-	height: 226px;
+	min-height: 226px;
 	
-	background-image: linear-gradient(#ffffff 18%, #f7e296 18%);
+	background-image: linear-gradient(#ffffff 40px, #f7e296 40px);
 }
 
 .main-header ul,
@@ -151,130 +152,76 @@ img {
 	width: 1040px;
 	margin: 0 auto;
 	padding-top: 70px;
+	margin-bottom: 35px;
 }
 
 .header-top-panel input,
 .header-top-panel a {
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
-	line-height: 50px;/* в макете этот параметр указан 36px, но тогда строчка не центрируется относительно input'ов */
+	line-height: 36px;
 	font-weight: 300;
 	letter-spacing: 0.01em;
 	color: rgba(0, 0, 0, 1);
 }
 
-.header-top-panel__navigation {
-	display: flex;
-	justify-content: space-between;
-	width: 500px;
-	height: 50px;
-}
-
-.header-top-panel__navigation a {
-	display: block;
-	height: 50px;
-	padding-left: 25px;
-	
-	text-align: right;
-}
-
-.header-user-navigation {
-	display: flex;
-	justify-content: flex-start;	
-	width: 280px;
-	height: 50px;
-}
-
-.header-user-name {
-	padding-left: 25px;
-	
-	background-image: url("../img/icon-user-header.svg");
-	background-position: left center;
-	background-repeat: no-repeat;
-	
-	overflow: hidden;
-}
-
-.header-user-logout {
-	opacity: 0.3;
-}
-
-.header-user-logout:hover,
-.header-user-logout:focus {
-	opacity: 1;
-}
-
-.header-user-logout:active {
-	opacity: 0.6;
-}
-
-.header-user-login {
-	/*width: 75px;*/
-	
-	background-image: url("../img/icon-user-header.svg");
-	background-position: left center;
-	background-repeat: no-repeat;
-}
-
-.header-compare {
-	/*width: 90px;*/
-	
-	background-image: url("../img/icon-compare-header.svg");
-	background-position: left center;
-	background-repeat: no-repeat;
-}
-
-.header-cart {
-	/*width: 85px;*/
-	
-	background-image: url("../img/icon-cart-header.svg");
-	background-position: left center;
-	background-repeat: no-repeat;
-}
-
 /* ===  форма "поиск по сайту" в HEADER  === */
 
 .header-search-form {
-	display: inline-block;
-	vertical-align: middle;	
+	display: flex;
+	align-items: center;
 	margin: 0;
 	padding: 0;
-	width: 440px;
+	width: 520px;
 	
 	font-size: 0;
 	line-height: 0;
 }
-/*
-.header-search-form span {
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-right: 16px;
-	
-	background-image: url("../img/icon-search.svg");
+
+.search-group {	
+	background-image: url("../img/icon-search-header.svg");
 	background-position: left center;
 	background-repeat: no-repeat;
 }
-*/
+
 .header-search-form input {
+	margin: 0;
+	padding: 0;
+	min-height: 44px;
+	
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 15px;
+	line-height: 36px;
+	font-weight: 300;
+	letter-spacing: 0.01em;
+	color: rgba(0, 0, 0, 0.3);
+	
 	background: transparent;
+	
 	border: 2px solid transparent;
 	outline: none;
 }
 
 .header-search-form input[type="search"] {
-	width: 319px;
+	width: 355px;
+	padding-left: 32px;
 	
-	opacity: 0.6;
+	opacity: 0.3;
 }
 
 .header-search-form input[type="submit"] {
-	/*display: none;*/
+	visibility: hidden;
 	width: 81px;
+	
+	color: rgba(0, 0, 0, 1);
+	
+	border: 2px solid #000000;
 }
 
 .header-search-form input[type="search"]:hover {
-	opacity: 1;
+	color: rgba(0, 0, 0, 0.6);
+	
+	opacity: 0.6;
 }
 
 .header-search-form input[type="search"]:active,
@@ -283,51 +230,144 @@ img {
 	border-left-color: transparent;
 	border-right-color: transparent;
 	border-bottom-color: #000000;
+	
+	color: rgba(0, 0, 0, 1);
+	
+	opacity: 1;
+}
+
+.header-search-form input[type="search"]:active,
+.header-search-form input[type="search"]:focus ~ input[type="submit"] {
+	visibility: visible;
+	
 	opacity: 1;
 }
 
 .header-search-form input[type="submit"]:hover,
 .header-search-form input[type="submit"]:focus {
-	/*display: block;*/
 	color: rgba(255, 255, 255, 1);
 	
 	background-color: #000000;
 }
 
 .header-search-form input[type="submit"]:active {
-	/*display: none;*/
+	visibility: visible;
+	
 	color: rgba(255, 255, 255, 0.3);
 	
 	background-color: #000000;
 }
 
+/* ===  верхнее меню в HEADER  === */
+
+.header-top-panel-navigation {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 520px;
+	min-height: 36px;
+	padding-left: 20px;
+}
+
+.header-top-panel-navigation a {
+	display: block;
+	height: 36px;
+}
+
+.header-top-panel-navigation > a {
+	width: 100px;
+	margin-left: 20px;
+	
+	text-align: right;
+}
+
+.header-user-navigation {
+	display: flex;
+	justify-content: flex-start;	
+	width: 260px;
+	min-height: 36px;
+}
+
+.header-user-navigation .header-user-name {
+	max-width: 200px;
+	padding-left: 25px;
+
+	background-image: url("../img/icon-user-header.svg");
+	background-position: left center;
+	background-repeat: no-repeat;
+	
+	overflow: hidden;
+}
+
+.header-user-navigation .header-user-logout {
+	width: 45px;
+	padding-left: 20px;
+	
+	opacity: 0.3;
+}
+
+.header-user-navigation .header-user-logout:hover,
+.header-user-navigation .header-user-logout:focus {
+	opacity: 1;
+}
+
+.header-user-navigation .header-user-logout:active {
+	opacity: 0.6;
+}
+
+.header-user-navigation .header-user-login {
+	width: 45px;
+	padding-left: 25px;
+	margin-left: 0;
+	
+	background-image: url("../img/icon-user-header.svg");
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+.header-top-panel-navigation .header-compare {
+	background-image: url("../img/icon-compare-header.svg");
+	background-position: 5px center;
+	background-repeat: no-repeat;
+}
+
+.header-top-panel-navigation .header-cart {	
+	background-image: url("../img/icon-cart-header.svg");
+	background-position: 15px center;
+	background-repeat: no-repeat;
+}
+
+/* ===  навигация по сайту в HEADER  === */
+
 .header-main-navigation {
 	width: 1040px;
 	margin: 0 auto;
-	margin-top: 27px;
 }
 
 .site-nav {
+	position: relative;
+	
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
-	
-	margin: 0;
-	padding: 0;
+	align-items: center;
 }
 
 .site-nav > li {
 	width: 120px;
-	flex-grow: 1;
 }
 
 .site-nav > li:first-child {
 	width: 220px;
-	flex-grow: 7;
+	margin-right: 320px;
+}
+
+.site-nav > li:nth-child(2) {
+	width: 130px;
+	margin-right: 30px;
 }
 
 .site-nav > li:last-child {
-	text-align: right;
+	margin-left: 100px;
 }
 
 .site-nav a {
@@ -336,21 +376,19 @@ img {
 	text-transform: uppercase;
 }
 
-.site-nav li:first-child {
-	position: relative;
-}
-
 .header-main-navigation span::before,
 .header-main-navigation span::after {
 	position: absolute;
 	content: "";
-	top: 9px;
+	top: 10px;
 	left: 220px;
 	
 	width: 16px;
 	height: 2px;
 	
-	background-color: rgba(0, 0, 0, 0.5);	
+	background-color: rgba(0, 0, 0, 0.3);
+	
+	cursor: pointer;
 }
 
 .header-main-navigation span::after {
@@ -359,7 +397,7 @@ img {
 
 /* ===  выпадающее подменю  === */
 
-.main-navigation__sub__menu {	
+.main-navigation-sub-menu {	
 	position: absolute;
 	top: 20px;
 	left: -60px;
@@ -367,22 +405,19 @@ img {
 	
 	display: flex;	
 	justify-content: flex-start;	
-	width: 1160px;
-	height: 149px;
-	padding-top: 15px;
+	width: 1100px;
+	padding-top: 25px;
+	padding-left: 60px;
 	visibility: hidden;
 	
 	background-color: #f7e296;
 }
 
-.main-navigation__sub__menu ul {
-	margin: 0;
-	padding: 0;
-	
-	list-style: none;
+.main-navigation-sub-menu ul {
+	padding-bottom: 37px;
 }
 
-.main-navigation__sub__menu a {
+.main-navigation-sub-menu a {
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
 	line-height: 36px;
@@ -400,20 +435,12 @@ img {
 	margin-right: 55px;
 }
 
-.site-nav li:first-child:hover .main-navigation__sub__menu {
+.site-nav li:first-child:hover .main-navigation-sub-menu {
 	visibility: visible;
 }
 
-.site-nav li:first-child:focus .main-navigation__sub__menu {
+.site-nav li:first-child:focus .main-navigation-sub-menu {
 	visibility: visible;
-}
-
-.site-nav li:first-child:hover .sub-menu-column-1 {
-	margin-left: 60px;
-}
-
-.site-nav li:first-child:focus .sub-menu-column-1 {
-	margin-left: 60px;
 }
 
 /* ========== section PROMO SLIDER  ========== */
@@ -422,7 +449,6 @@ img {
 	position: relative;
 	
 	width: 1160px;
-	height: 594px;
 	
 	background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
 }
@@ -433,7 +459,7 @@ img {
 
 .promo-slider-controls {
 	position: absolute;
-	top: 325px;
+	top: 50%;
 	right: 80px;
 	z-index: 10;
 }
@@ -457,14 +483,13 @@ img {
 
 .promo-slider-frame {
 	width: 1160px;
-	height: 594px;
 	
 	overflow: hidden;
 }
 
 .promo-slader-slides {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	
 	width: 300%;
@@ -472,6 +497,9 @@ img {
 
 .promo-slide-item {
 	position: relative;
+	
+	display: flex;
+	justify-content: space-between;
 	width: 1160px;
 }
 
@@ -498,10 +526,8 @@ img {
 	background-color: #ffffff;
 }
 
-.promo-image {	
-	float: left;	
+.promo-image {
 	width: 580px;
-	height: 594px;
 	
 	font-size: 0;
 	line-height: 0;
@@ -509,23 +535,23 @@ img {
 }
 
 .promo-data {
-	float: right;
 	width: 560px;
-	height: 594px;
 	padding-top: 40px;
 	padding-left: 20px;
+	padding-top: 80px;
 }
 
 .promo-slide-item h2 {
 	margin: 0;
 	padding: 0;
-	margin-top: 40px;
 	
 	font-size: 47px;
 	letter-spacing: 0.01em;
 }
 
 .promo-description {
+	margin-bottom: 48px;
+	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
 	line-height: 30px;
@@ -535,25 +561,25 @@ img {
 }
 
 .promo-data a {
-	position: relative;
-	
 	display: block;
 	width: 220px;
 	height: 40px;
-	margin-top: 48px;
+	margin-bottom: 50px;
+	padding: 9px 0;
+	box-sizing: border-box;
 	
-	line-height: 40px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: normal;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
 	text-transform: uppercase;
 	text-align: center;
 	
 	background-color: transparent;
-	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
 
 .promo-data table {
-	margin-top: 50px;
+	margin-bottom: 100px;
 	
 	text-align: left;
 }
@@ -634,8 +660,7 @@ img {
 
 .categories-devices h3 {
 	margin: 0;
-	padding: 0;
-	margin-top: 34px;
+	padding: 0;	
 	
 	font: inherit;
 	letter-spacing: 0.01em;
@@ -646,7 +671,8 @@ img {
 	position: relative;
 	
 	width: 160px;
-	height: 160px;
+	min-height: 160px;
+	margin-bottom: 34px;
 	
 	background-color: #f7e296;
 }
@@ -677,15 +703,12 @@ img {
 /* ========== section SERVICES  ========== */
 
 .services {
-	height: 456px;
-	
-	background-image: linear-gradient(#ffffff 37%, #e5e5e5 37%);
+	background-image: linear-gradient(#ffffff 168px, #e5e5e5 168px);
 }
 
 .services .container {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .services input[type="radio"] {
@@ -693,28 +716,22 @@ img {
 }
 
 .services-slider-controls {
-	width: 280px;
-	
-	line-height: 40px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
-	letter-spacing: 0.2em;
-	color: #000000;
-	text-transform: uppercase;
-}
-
-.services-slider-controls ul {
 	position: relative;
 	
 	margin: 0;
 	padding: 0;
 	width: 280px;
+	padding-top: 12px;
+	margin-bottom: 140px;
+	padding-top: 147px;
 	
 	list-style: none;
 }
 
-.services-slider-controls ul::after {
+.services-slider-controls::after {
 	position: absolute;
 	content: "";
-	top: 68px;
+	top: 220px;
 	right: -160px;
 	
 	width: 318px;
@@ -728,7 +745,7 @@ img {
 .services-slider-controls li {
 	display: block;
 	width: 280px;
-	height: 40px;
+	min-height: 40px;
 	margin: 20px 0;
 }
 
@@ -745,8 +762,14 @@ img {
 
 	display: block;
 	width: 160px;
-	height: 40px;
+	min-height: 40px;
+	padding: 9px 0;
+	box-sizing: border-box;
 	
+	line-height: normal;
+	letter-spacing: 0.2em;
+	color: #000000;
+	text-transform: uppercase;
 	text-align: center;
 	
 	background-color: transparent;
@@ -775,7 +798,8 @@ img {
 
 .services-slider-frame {
 	width: 880px;
-	height: 456px;
+	margin-bottom: 140px;
+	padding-top: 135px;	
 	
 	overflow: hidden;
 }
@@ -783,7 +807,6 @@ img {
 .services-slader-slides {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	
 	width: 300%;
 }
@@ -791,24 +814,26 @@ img {
 .services-slide-item {
 	position: relative;
 	
-	float: left;
+	display: flex;
+	justify-content: space-between;
 	width: 880px;
-	height: 456px;
+	padding-left: 120px;
+}
+
+.services-slide-item div {
+	margin-right: 100px;
 }
 
 .services-slide-item h2 {
 	margin: 0;
-	padding: 0;
-	margin-top: 135px;
-	padding-left: 120px;
-	
+	padding: 0;	
+		
 	font-size: 47px;
 	letter-spacing: 0.01em;
 }
 
 .services-slide-item p {
 	width: 437px;
-	padding-left: 120px;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
@@ -819,11 +844,7 @@ img {
 }
 
 .services-slide-item img {
-	position: absolute;
-	top: 50%;
-	right: 60px;
-	
-	transform: translateY(-50%);
+	padding-top: 18px;
 }
 
 #radio-btn-4:checked ~ .services-slider-controls label[for="radio-btn-4"],
@@ -856,7 +877,8 @@ img {
 /* ========== section BRANDES  ========== */
 
 .brandes {
-	height: 241px;
+	min-height: 241px;
+	padding-top: 95px;
 }
 
 .brandes ul {
@@ -866,7 +888,6 @@ img {
 	
 	margin: 0;
 	padding: 0;
-	margin-top: 95px;
 	
 	font-size: 0;
 	
@@ -875,7 +896,7 @@ img {
 
 .brandes li {
 	width: 260px;
-	height: 100px;
+	min-height: 100px;
 	
 	background-position: center;
 	background-repeat: no-repeat;
@@ -925,24 +946,25 @@ img {
 	display: flex;
 	justify-content: space-between;
 	
-	height: 590px;
+	min-height: 590px;
 }
 
-.company-contact__section {
+.company-contact-section {
 	width: 580px;
 }
 
-.company-contact__section h2 {
+.company-contact-section h2 {
 	position: relative;
 	
 	margin: 0;
 	padding: 0;
+	margin-bottom: 30px;
 	
 	font-size: 47px;
 	letter-spacing: 0.01em;
 }
 
-.company-contact__section h2:before {
+.company-contact-section h2:before {
 	content: "";
 	position: absolute;
 	top: -52px;
@@ -954,8 +976,8 @@ img {
 	background-color: #000000;
 }
 
-.company-contact__section p {
-	margin-top: 30px;
+.company-contact-section p {
+	margin-bottom: 30px;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
@@ -964,12 +986,12 @@ img {
 	color: #464646;
 }
 
-.company-contact__section ul {
+.company-contact-section ul {
 	margin: 0;
 	padding: 0;
-	margin-top: 65px;
 	margin-bottom: 50px;
 	padding-left: 18px;
+	padding-top: 35px;
 	
 	font-size: 16px;
 	line-height: 40px;
@@ -977,23 +999,25 @@ img {
 	list-style:circle;
 }
 
-.company-contact__button {
+.company-contact-button {
 	position: relative;
 	
 	display: block;
 	width: 260px;
-	height: 40px;
+	min-height: 40px;
 	margin: 0;
 	padding: 0;
+	padding: 9px 0;
+	box-sizing: border-box;
 	
-	line-height: 40px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: normal;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
 	text-transform: uppercase;
 	text-align: center;
 }
 
-.company-contact__button::before {
+.company-contact-button::before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -1012,18 +1036,29 @@ img {
 	display: block;
 	margin: 0;
 	padding: 0;
-	margin-top: 40px;
-	margin-bottom: 55px;
+	padding-top: 10px;
+	margin-bottom: 58px;
+	
+	cursor: pointer;
 }
 
 /* ==========  FOOTER  ========== */
 
 .main-footer {
-	height: 323px;
+	min-height: 323px;
 	
 	color: #ffffff;
 	
 	background-color: #464646;
+}
+.main-footer ul,
+.main-footer a {
+	margin: 0;
+	padding: 0;
+}
+
+.main-footer ul {
+	list-style: none;
 }
 
 .main-footer a {
@@ -1045,24 +1080,21 @@ img {
 	width: 1160px;
 	margin: 0 auto;
 	padding-top: 65px;
+	margin-bottom: 15px;
 }
 
-.footer-top-panel__navigation {
+.footer-top-panel-navigation {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
-	width: 330px;
-	height: 36px;
-	margin: 0;
-	padding: 0;
-	
-	list-style: none;
+	width: 360px;
+	min-height: 36px;
 }
 
-.footer-top-panel__navigation a {
+.footer-top-panel-navigation a {
 	display: block;
-	height: 36px;
-	padding-left: 25px;
+	min-height: 36px;
+	margin-left: 40px;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
@@ -1075,28 +1107,25 @@ img {
 	opacity: 0.7;
 }
 
-.footer-top-panel__navigation a:hover,
-.footer-top-panel__navigation a:focus {
+.footer-top-panel-navigation a:hover,
+.footer-top-panel-navigation a:focus {
 	opacity: 1;
 }
 
-.footer-top-panel__navigation a:active {
+.footer-top-panel-navigation a:active {
 	opacity: 0.3;
 }
 
-.footer-top-panel__navigation a:first-child {
-	padding-left: 0;
-}
-
-.footer-user-login {
+.footer-top-panel-navigation .footer-user-login {
 	width: 70px;
+	margin-left: 0;
 	
 	background-image: url("../img/icon-user-footer.svg");
 	background-position: left center;
 	background-repeat: no-repeat;
 }
 
-.footer-compare {
+.footer-top-panel-navigation .footer-compare {
 	width: 95px;
 	
 	background-image: url("../img/icon-compare-footer.svg");
@@ -1104,7 +1133,7 @@ img {
 	background-repeat: no-repeat;
 }
 
-.footer-cart {
+.footer-top-panel-navigation .footer-cart {
 	width: 85px;
 	
 	background-image: url("../img/icon-cart-footer.svg");
@@ -1116,12 +1145,11 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
-	margin-top: 15px;
+	margin-bottom: 35px;
 }
 
 .footer-middle-panel p {
-	width: 210px;
+	width: 250px;
 }
 
 .footer-middle-panel p:last-child {
@@ -1134,10 +1162,6 @@ img {
 	align-items: center;
 	
 	width: 430px;
-	margin: 0;
-	padding: 0;
-	
-	list-style: none;
 }
 
 .footer-main-navigation a {
@@ -1152,8 +1176,6 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
-	margin-top: 35px;
 }
 
 .footer-bottom-panel::before {
@@ -1173,12 +1195,9 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	
-	margin: 0;
-	padding: 0;
 	width: 142px;
 	
 	font-size: 0;
-	list-style: none;
 }
 
 .footer-social-buttons:first-child {
@@ -1258,8 +1277,10 @@ img {
 .modal-write-us {
 	position: relative;
 	
-	width: 960px;
-	height: 563px;
+	width: 860px;
+	height: 467px;
+	padding-left: 100px;
+	padding-top: 96px;
 	
 	background-color: #ffffff;
 	
@@ -1267,13 +1288,24 @@ img {
 	filter: drop-shadow(0 10px 20px rgba(4, 6, 6, 0.2));
 }
 
+.modal-write-us p {
+	margin: 0;
+	padding: 0;
+}
+
 .write-us label {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	
 	line-height: 18px;
 }
 
 .write-us input,
 .write-us textarea {
 	padding-left: 20px;
+	width: 100%;
+	box-sizing: border-box;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 14px;
@@ -1287,14 +1319,31 @@ img {
 	outline: none;
 }
 
+.field-group {
+	width: 360px;
+	
+ }
+ 
+.textarea-group {
+	width: 760px;	
+ }
+
 .write-us input {
-	width: 340px;
 	height: 50px;
 }
 
 .write-us textarea {
-	width: 740px;
 	height: 155px;
+	margin-bottom: 40px;
+	padding-top: 15px;
+}
+
+.write-us div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 760px;
+	margin-bottom: 26px;
 }
 
 .write-us input:hover,
@@ -1319,11 +1368,12 @@ img {
 	margin: 0;
 	padding: 0;
 	width: 200px;
-	height: 40px;
-	margin-top: 48px;
+	min-height: 40px;
+	padding: 8px 0;
+	box-sizing: border-box;
 	
 	font-weight: 800;
-	line-height: 40px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: normal;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
 	text-transform: uppercase;
@@ -1386,11 +1436,17 @@ img {
 
 /* ==========  страница CATALOG.HTML  ========== */
 
+.catalog-title {
+	margin: 0;
+	padding: 0;
+	padding-left: 60px;
+}
+
 .page-title {
 	margin: 0;
 	padding: 0;
-	margin-left: 60px;
-	margin-top: 30px;
+	margin-bottom: 20px;
+	padding-top: 30px;
 	
 	font-size: 47px;
 	letter-spacing: 0.01em;
@@ -1402,8 +1458,6 @@ img {
 	align-items: center;
 	margin: 0;
 	padding: 0;
-	margin-left: 60px;
-	margin-top: 20px;
 	margin-bottom: 40px;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
@@ -1450,148 +1504,50 @@ img {
 
 /* ==========  MAIN страницы CATALOG.HTML  ========== */
 
-.filters {
-	background-color: #efefef;
+.catalog-decor-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	
+	background-image: linear-gradient(to right, #dbdbdb 28%, #ebebeb 28%);
 }
 
-.filter-header {
+.catalog-decor-header-filter {
+	min-width: 268px;
 	height: 70px;
+	padding-left: 60px;
 	
 	font-size: 16px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+	line-height: 70px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
 	
-	background-color: #dcdcdc;
+	background-color: #dbdbdb;
 }
 
-/* ===  форма-фильтр выбора по параметрам  === */
-
-.catalog-filter-form fieldset {
-	border: none;
-}
-
-.catalog-filter-form legend {
-	letter-spacing: 0.01em;
-}
-
-.catalog-filter-form ul {
+.catalog-decor-header-sorting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	margin: 0;
 	padding: 0;
-	
-	list-style: none;
+	padding-left: 72px;
+	width: 760px;
+	height: 70px;
 }
 
-.catalog-filter-form p {
-	letter-spacing: 0.01em;
-}
-
-.catalog-filter__price-range {
-	width: 222px;
-	height: 50px;
-}
-
-.catalog-filter__price-range button {
-	width: 20px;
-	height: 22px;
-	
-	background-color: #ffffff;
-	background-image: url("../img/filter-button-quiet.svg");
-	background-position: center;
-	background-repeat: np-repeat;
-	
-	border: none;
-	border-radius: 50%;
-	
-	cursor: pointer;
-}
-
-.catalog-filter__price-range button:active {
-	width: 22px;
-	height: 24px;
-	
-	background-color: #ffffff;
-	background-image: url("../img/filter-button-active.svg");
-}
-
-.catalog-filter__price-range label {
-	font-size: 14px;
-	line-height: 22px;
-	font-weight: 300;
-	
-	opacity: 0.2;
-}
-
-.catalog-filter__price-range label:last-child {	
-	text-align: center;
-}
-
-.catalog-filter-btn {
+.catalog-decor-header-sorting p {
 	margin: 0;
 	padding: 0;
-	width: 200px;
-	height: 40px;
-	margin-top: 20px;
+	margin-right: 52px;
 	
-	font-weight: 800;
-	line-height: 40px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	font-size: 16px;
 	letter-spacing: 0.2em;
-	color: rgba(0, 0, 0, 1);
 	text-transform: uppercase;
-	text-align: center;
-	
-	background-color: transparent;
-	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
-	
-	border: none;
-}
-
-.filter-option label {
-	font-family: "Open Sans", "Arial", sans-serif;
-	font-size: 14px;
-	line-height: 40px;
-	font-weight: 300;
-	color: #000000;
-	letter-spacing: 0.01em;
-	
-	cursor: pointer;
-}
-
-.filter-option label:hover,
-.filter-option label:focus {
-	color: #000000;
-	
-	opacity: 1;
-}
-
-.filter-option label:active {
-	color: #000000;
-	
-	opacity: 1;
-}
-
-.filter-option label:disabled {
-	color: #a6a6a6;
 }
 
 /* ===  сортировка  === */
-
-.catalog-header {
-	display: flex;
-	justify-content: justify-content;
-	align-items: center;
-	height: 70px;	
-	
-	background-color: #ebebeb;
-}
-
-.catalog-header p {
-	margin: 0;
-	padding: 0;
-	
-	font-size: 16px;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-}
 
 .catalog-sorting {
 	display: flex;
@@ -1601,7 +1557,6 @@ img {
 	margin: 0;
 	padding: 0;
 	width: 560px;
-	margin-left: 52px;
 	
 	list-style: none;
 }
@@ -1644,7 +1599,7 @@ img {
 	content: "";
 	position: absolute;
 	top: -7px;
-	right: 0;
+	left: 210px;
 	
 	width: 11px;
 	height: 10px;
@@ -1658,7 +1613,7 @@ img {
 	content: "";
 	position: absolute;
 	top: -7px;
-	right: 0;
+	left: 210px;
 	
 	width: 11px;
 	height: 10px;
@@ -1668,18 +1623,362 @@ img {
 	background-repeat: no-repeat;
 }
 
-/* ===  каталог товаров  === */
+/* ===  раздел с фильтром и ассортиментом товаров  === */
 
-.catalog-list {
+.choice-of-devices {
+	display: flex;
+	justify-content: center;
+	
+	background-image: linear-gradient(to right, #eeeeee 28%, #ffffff 28%);
+}
+
+.filters {
+	min-width: 328px;
+	
+	background-color: #efefef;
+}
+
+/* ===  форма-фильтр выбора по параметрам  === */
+
+.catalog-filter-form {
+	width: 200px;
+	padding-left: 60px;
+	padding-top: 68px;
+}
+
+.catalog-filter-form fieldset {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 40px;	
+	
+	border: none;
+}
+
+.catalog-filter-form legend {
+	margin: 0;
+	padding: 0;
+	
+	letter-spacing: 0.01em;
+}
+
+.catalog-filter-form ul {
 	margin: 0;
 	padding: 0;
 	
 	list-style: none;
 }
 
-.catalog-item__name {
+.catalog-filter-form p {
+	margin: 0;
+	padding: 0;
+	
+	letter-spacing: 0.01em;
+}
+
+.catalog-filter-form legend,
+.catalog-filter-form p {
+	position: relative;
+}
+
+.catalog-filter-form legend::before,
+.catalog-filter-form p::before {
+	content: "";
+	position: absolute;
+	top: -13px;
+	left: 0;
+	
+	width: 200px;
+	height: 2px;
+	
+	background-color: #000000;
+}
+
+.catalog-filter-price-range {
+	position: relative;
+	
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 200px;
+	height: 50px;
+	margin-bottom: 60px;
+	
+	background-image: linear-gradient(transparent 48%, #dbdbdb 48%, #dbdbdb 52%, transparent 52%);
+}
+
+.price-range-range-marker {
+	z-index: 10;
+	
+	width: 50%;
+	height: 2px;
+	
+	background-color: #91c92f;
+}
+
+.catalog-filter-price-range button {
+	position: absolute;
+	top: 50%;
+	z-index: 100;
+	
+	width: 20px;
+	height: 22px;
+	
+	background-color: #ffffff;
+	background-image: url("../img/filter-button-quiet.svg");
+	background-position: center;
+	background-repeat: np-repeat;
+	
+	border: none;
+	border-radius: 50%;
+	
+	transform: translateY(-45%);
+	
+	cursor: pointer;
+}
+
+.price-range-left-marker {
+	position: absolute;
+	left: 0;	
+	z-index: 100;
+}
+
+.catalog-filter-price-range button:active {	
+	width: 22px;
+	height: 24px;
+	
+	background-color: #ffffff;
+	background-image: url("../img/filter-button-active.svg");
+}
+
+.price-range-left-marker {
+	left: -5%;
+}
+
+.price-range-right-marker {
+	left: 50%;
+}
+
+.catalog-filter-price-range label {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 300;
+	
+	opacity: 0.2;
+}
+
+.catalog-filter-price-range label:last-child {	
+	text-align: center;
+}
+
+.price-range-left-display {
+	position: absolute;
+	left: -80px;
+	top: 35px;
+	z-index: 100;
+	
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 300;
+	text-align: center;
+	
+	background-color: transparent;
+	
+	border: none;
+	
+	opacity: 0.2;
+}
+
+.price-range-right-display {
+	position: absolute;
+	left: 25px;
+	top: 35px;
+	z-index: 100;
+	
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 300;
+	text-align: center;
+	
+	background-color: transparent;
+	
+	border: none;
+	
+	opacity: 0.2;
+}
+
+.catalog-filter-btn {
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	min-height: 40px;
+	padding: 8px 0;
+	box-sizing: border-box;
+	
+	font-weight: 800;
+	line-height: normal;
+	letter-spacing: 0.2em;
+	color: rgba(0, 0, 0, 1);
+	text-transform: uppercase;
+	text-align: center;
+	
+	background-color: transparent;
+	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+	
+	border: none;
+}
+
+.filter-option {
+	position: relative;
+}
+
+.filter-option label {
+	padding-left: 40px;
+	
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: 300;
 	color: #000000;
 	letter-spacing: 0.01em;
+	
+	cursor: pointer;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+	color: #000000;
+	
+	opacity: 0.6;
+}
+
+.filter-input:active + label,
+.filter-input:checked:active + label {
+	color: #000000;
+	
+	opacity: 1;
+}
+
+.filter-input:checked:hover + label,
+.filter-input:checked:focus + label {
+	color: #000000;
+	
+	opacity: 0.6;
+}
+
+.filter-input:disabled + label {
+	color: #000000;
+	
+	opacity: 0.25;
+}
+
+.checkbox-indicator {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	
+	display: block;
+	width: 23px;
+	height: 23px;
+	
+	background-image: url("../img/checkbox-off.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	transform: translateY(-50%);
+	
+	cursor: pointer;
+}
+
+.filter-input:checked + label .checkbox-indicator {
+	width: 27px;
+	height: 23px;
+	
+	background-image: url("../img/checkbox-on.svg");
+}
+
+.radio-indicator {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	
+	display: block;
+	width: 25px;
+	height: 25px;
+	
+	background-image: url("../img/radio-off.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	transform: translateY(-50%);
+	
+	cursor: pointer;
+}
+
+.filter-input:checked + label .radio-indicator {
+	background-image: url("../img/radio-on.svg");
+}
+
+/* ==========  section CATALOG  ========== */
+
+.catalog {
+	min-width: 832px;
+}
+
+.container-catalog {
+	margin: 0 auto;
+	padding-left: 72px;
+	padding-top: 68px;
+	width:760px;
+}
+
+/* ===  каталог товаров  === */
+
+.catalog-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+	margin: 0;
+	padding: 0;
+	width: 760px;
+	margin-bottom: 40px;
+	
+	list-style: none;
+}
+
+.catalog-list h3,
+.catalog-list p {
+	margin: 0;
+	padding: 0;
+	
+	font-size: 0;
+	line-height: 0;
+}
+
+.catalog-item-description {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	margin: 0;
+	padding: 0;
+	width: 360px;
+	margin-bottom: 50px;
+}
+
+.catalog-list .catalog-item-name {
+	font-size: 18px;
+	line-height: normal;
+	color: #000000;
+	letter-spacing: 0.01em;
+}
+
+.catalog-list .catalog-item-price {
+	font-size: 16px;
+	line-height: normal;
+	font-weight: 300;
+	letter-spacing: 0.01em;
+	color: #464646;
 }
 
 .catalog-item ul {
@@ -1689,16 +1988,37 @@ img {
 	list-style: none;
 }
 
+.catalog-item-image {
+	position: relative;
+	
+	margin: 0;
+	padding: 0;
+	width: 360px;
+	height: 380px;
+	margin-bottom: 33px;
+	
+	text-align: center;
+	
+	cursor: pointer;
+}
+
+.catalog-item-image img {
+	background-color: #eeeeee;
+}
+
 .buy-in-cart {
 	display: block;
 	width: 200px;
-	height: 40px;
+	min-height: 40px;
+	margin-bottom: 10px;
+	padding: 9px 0;
+	box-sizing: border-box;
 	
 	color: #000000;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	text-align: center;
-	line-height: 40px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: normal;
 	
 	background-color: transparent;
 	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
@@ -1723,16 +2043,16 @@ img {
 	opacity: 0.2;
 }
 
-.catalog-item__price {
-	font-size: 16px;
-	font-weight: 300;
-	letter-spacing: 0.01em;
-	color: #464646;
-}
-
-.new-item {
+.catalog-list .new-item {
+	position: absolute;
+	top: 28px;
+	right: 26px;
+	z-index: 10;
+	
 	width: 60px;
 	height: 60px;
+	margin: 0;
+	padding: 0;
 	
 	font-size: 14px;
 	letter-spacing: 0.05em;
@@ -1745,22 +2065,58 @@ img {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 }
-/*
-.catalog-item__choice {
+
+.new-item-invisible {
 	display: none;
 }
-*/
+
+.new-item-visible {
+	display: block;
+}
+
+.catalog-item-choice {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	margin: 0;
+	padding: 0;
+	
+	visibility: hidden;
+}
+
+.catalog-item-image:hover .catalog-item-choice {
+	z-index: 10;
+	
+	visibility: visible;
+	
+	transform: translate(-50%, -50%);
+}
+
+.catalog-item-image:focus .catalog-item-choice {
+	z-index: 10;
+	
+	visibility: visible;
+	
+	transform: translate(-50%, -50%);
+}
+
+.catalog-item-image:hover img {
+	opacity: 0.7;
+}
+
 
 /* ===  пагинация  === */
 
 .pagination-list {
 	display: flex;
-	justify-content: justify-content;
+	justify-content: space-between;
 	align-items: center;
 	width: 760px;
-	height: 70px;
+	min-height: 70px;
 	margin: 0;
 	padding: 0;
+	margin-bottom: 76px;
 	
 	background-color: #ebebeb;
 	
@@ -1790,7 +2146,7 @@ img {
 .back-forward a {
 	display: block;
 	width: 126px;
-	height: 70px;
+	min-height: 70px;
 	
 	font-size: 16px;
 	letter-spacing: 0.2em;
@@ -1812,4 +2168,12 @@ img {
 	color: rgba(0, 0, 0, 0.3);
 	
 	background-color: #d9d9d9;
+}
+
+.pagination-list li:first-child {
+	margin-right: 200px;
+}
+
+.pagination-list li:last-child {
+	margin-left: 200px;
 }

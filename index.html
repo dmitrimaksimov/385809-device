@@ -12,50 +12,52 @@
 	-->
 	<header class="main-header container">
 		<a class="logo-header">
-			<img src="img/logo-header.svg" alt="DEVICE" width="163" height="36">
+			<img src="img/logo-header.png" alt="DEVICE" width="163" height="36">
 		</a>
 		<!-- верхняя панель: поиск, авторизация, корзина и т.д. -->
 		<div class="header-top-panel">
-				<form class="header-search-form" action="#" method="post">
+			<form class="header-search-form" action="#" method="post">
+				<p class="search-group">
 					<label class="visually-hidden" for="header-search">Поиск по сайту</label>
 					<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
 					<input type="submit" value="Найти">
-				</form>
-			<div class="header-top-panel__navigation">
+				</p>
+			</form>
+			<div class="header-top-panel-navigation">
 				<ul class="header-user-navigation">
 					<li>
-						<a class="header-user-login active-effects__black" href="#">Войти</a>
+						<a class="header-user-login active-effects-black" href="#">Войти</a>
 					</li>
 				</ul>
-				<a class="header-compare active-effects__black" href="#">Сравнить</a>
-				<a class="header-cart active-effects__black" href="#">Корзина</a>				
+				<a class="header-compare active-effects-black" href="#">Сравнить</a>
+				<a class="header-cart active-effects-black" href="#">Корзина</a>				
 			</div>
 		</div>
 		<!-- главное меню -->
 		<nav class="header-main-navigation">
 			<ul class="site-nav">
-				<li><a class="active-effects__black" href="#" aria-haspopup="true">Каталог товаров<span></span></a>
+				<li><a class="active-effects-black" href="#" aria-haspopup="true">Каталог товаров</a><span></span>
 					<!-- выпадающее подменю -->
-					<div class="main-navigation__sub__menu">
+					<div class="main-navigation-sub-menu">
 						<ul class="sub-menu-column-1">
-							<li><a class="active-effects__black" href="catalog.html" tabindex="-1">Виртуальная реальность</a></li>
-							<li><a class="active-effects__black" href="catalog.html" tabindex="-1">Моноподы для селфи</a></li>
-							<li><a class="active-effects__black" href="catalog.html" tabindex="-1">Экшн-камеры</a></li>
+							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Виртуальная реальность</a></li>
+							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Моноподы для селфи</a></li>
+							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Экшн-камеры</a></li>
 						</ul>
 						<ul class="sub-menu-column-2">
-							<li><a class="active-effects__black" href="catalog.html" tabindex="-1">Фитнес-браслеты</a></li>
-							<li><a class="active-effects__black" href="catalog.html" tabindex="-1">Умные часы</a></li>
+							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Фитнес-браслеты</a></li>
+							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Умные часы</a></li>
 						</ul>
 						<ul class="sub-menu-column-3">
 							<li>
-								<a class="active-effects__black" href="catalog.html" tabindex="-1">Квадрокоптеры</a>
+								<a class="active-effects-black" href="catalog.html" tabindex="-1">Квадрокоптеры</a>
 							</li>
 						</ul>
 					</div>
 				</li>
-				<li><a class="active-effects__black" href="#">Доставка</a></li>
-				<li><a class="active-effects__black" href="#">Гарантия</a></li>
-				<li><a class="active-effects__black" href="#">Контакты</a></li>
+				<li><a class="active-effects-black" href="#">Доставка</a></li>
+				<li><a class="active-effects-black" href="#">Гарантия</a></li>
+				<li><a class="active-effects-black" href="#">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -84,7 +86,7 @@
 							<h2>Делай селфи,<br>как Бен Стиллер!</h2>
 							<p class="promo-description">Самая длинная палка для селфи доступна в нашем магазине.<br>
 							Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-							<a class="active-effects__yellow" href="#">подробнее</a>
+							<a class="active-effects-yellow" href="#">подробнее</a>
 							<table>
 								<caption class="visually-hidden">Характеристики палки для селфи</caption>
 								<tr>
@@ -110,7 +112,7 @@
 							<h2>Худеем<br>правильно!</h2>
 							<p class="promo-description">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> 
 							не пропускать занятия и соблюдать диету.</p>
-							<a class="active-effects__yellow" href="#">подробнее</a>
+							<a class="active-effects-yellow" href="#">подробнее</a>
 							<table>
 								<caption class="visually-hidden">Характеристики фитнес-браслета</caption>
 								<tr>
@@ -136,7 +138,7 @@
 							<h2>Порхает как бабочка,<br>жалит как пчела!</h2>
 							<p class="promo-description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> 
 							мощным лазером, замаскированным под стандартную камеру.</p>
-							<a class="active-effects__yellow" href="#">подробнее</a>
+							<a class="active-effects-yellow" href="#">подробнее</a>
 							<table>
 								<caption class="visually-hidden">Характеристики квадрокоптера</caption>
 								<tr>
@@ -213,40 +215,46 @@
 		<section class="services">
 			<div class="container">
 				<h2 class="visually-hidden">Услуги</h2>
+				
 				<input type="radio" id="radio-btn-4" name="toggle-services" checked>
 				<input type="radio" id="radio-btn-5" name="toggle-services">
 				<input type="radio" id="radio-btn-6" name="toggle-services">
-				<div class="services-slider-controls">
-					<ul>
-						<li>
-							<label for="radio-btn-4">доставка</label>
-						</li>
-						<li>
-							<label for="radio-btn-5">гарантия</label>
-						</li>
-						<li>
-							<label for="radio-btn-6">кредит</label>
-						</li>
-					</ul>
-				</div>
+				<ul class="services-slider-controls">
+					<li>
+						<label for="radio-btn-4">доставка</label>
+					</li>
+					<li>
+						<label for="radio-btn-5">гарантия</label>
+					</li>
+					<li>
+						<label for="radio-btn-6">кредит</label>
+					</li>
+				</ul>
+				
 				<div class="services-slider-frame"><!-- "окно" для показа слайда -->
 					<div class="services-slader-slides"><!-- "плёнка" из трёх слайдов -->
 						<div class="services-slide-item clearfix"><!-- слайд 1 -->
-							<h2>Доставка</h2>
-							<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
-							Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+							<div>
+								<h2>Доставка</h2>
+								<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
+								Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+							</div>
 							<img src="img/service-delivery.svg" alt="доставка" width="136" height="164">
 						</div>
 						<div class="services-slide-item clearfix"><!-- слайд 2 -->
-							<h2>Гарантия</h2>
-							<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, 
-							мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+							<div>
+								<h2>Гарантия</h2>
+								<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, 
+								мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+							</div>
 							<img src="img/service-warranty.svg" alt="гарантия" width="171" height="194">
 						</div>
 						<div class="services-slide-item clearfix"><!-- слайд 3 -->
-							<h2>Кредит</h2>
-							<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
-							условия кредита. Выгодные для нашего банка, разумеется.</p>
+							<div>
+								<h2>Кредит</h2>
+								<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+								условия кредита. Выгодные для нашего банка, разумеется.</p>
+							</div>
 							<img src="img/service-credit.svg" alt="кредит" width="156" height="186">
 						</div>
 					</div>
@@ -267,27 +275,28 @@
 		<section class="company-contact container">
 			<h2 class="visually-hidden">О нас и контакты</h2>
 			<!-- раздел О НАС -->
-			<section class="company-contact__section">
+			<section class="company-contact-section">
 				<h2>О нас</h2>
-				<p class="about-us__left">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
-				<p class="about-us__left">Мы можем доставить ваш товар в самые отдаленные точки России! 
+				<p class="about-us-left">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
+				<p class="about-us-left">Мы можем доставить ваш товар в самые отдаленные точки России! 
 				DEVICE работает со многими транспортными компаниями:</p>
 				<ul>
 					<li>Деловые Линии</li>
 					<li>Автотрейдинг</li>
 					<li>ЖелДорЭкспедиция</li>
 				</ul>
-				<a class="company-contact__button active-effects__yellow" href="#">подробнее о нас</a>
+				<a class="company-contact-button active-effects-yellow" href="#">подробнее о нас</a>
 			</section>
 			<!-- раздел КОНТАКТЫ -->
-			<section class="company-contact__section">
+			<section class="company-contact-section">
 				<h2>Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. 
 				Всякое бывает.</p>
 				<a class="open-map-big">
-					<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222">
+					<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222"
+					title="Открыть карту" tabindex="0">
 				</a>
-				<a class="company-contact__button active-effects__yellow" href="#">напишите нам</a>
+				<a class="company-contact-button active-effects-yellow" href="#">напишите нам</a>
 			</section>
 		</section>
 		
@@ -297,9 +306,9 @@
 		<div class="container">
 			<div class="footer-top-panel">
 				<a class="logo-footer">
-					<img src="img/logo-footer.svg" alt="DEVICE" width="163" height="36">
+					<img src="img/logo-footer.png" alt="DEVICE" width="163" height="36">
 				</a>
-				<ul class="footer-top-panel__navigation">
+				<ul class="footer-top-panel-navigation">
 					<li>
 						<a class="footer-user-login" href="#">Войти</a>
 					</li>
@@ -315,9 +324,9 @@
 				<p>г. Москва, ул. Строителей, 15</p>
 				<nav class="footer-main-navigation">
 					<ul>
-						<li><a class="active-effects__white" href="#">Доставка</a></li>
-						<li><a class="active-effects__white" href="#">Гарантия</a></li>
-						<li><a class="active-effects__white" href="#">Контакты</a></li>
+						<li><a class="active-effects-white" href="#">Доставка</a></li>
+						<li><a class="active-effects-white" href="#">Гарантия</a></li>
+						<li><a class="active-effects-white" href="#">Контакты</a></li>
 					</ul>
 				</nav>
 				<p>Тел.: +7 (495) 495-95-95</p>
@@ -329,7 +338,7 @@
 					<li><a class="social-btn-insta" href="#" title="Инстаграм">Инстаграм</a></li>
 					<li><a class="social-btn-twtr" href="#" title="Твиттер">Твиттер</a></li>
 				</ul>
-				<a class="logo-academy active-effects__footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" title="курс Базовый HTML и CSS">HTML Academy</a>
+				<a class="logo-academy active-effects-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" title="курс Базовый HTML и CSS">HTML Academy</a>
 			</div>
 		</div>
 	</footer>
@@ -338,20 +347,22 @@
 		<section class="modal-write-us">
 			<h2 class="visually-hidden">Напишите нам</h2>			
 			<form class="write-us" action="#" method="post">
-				<p>
-					<label for="user-name">Ваше имя:</label>
-					<input type="text" name="user-name" id="user-name" 
-					placeholder="Представьтесь, пожалуйста" required aria-required="true" autofocus>
-				</p>
-				<p>
-					<label for="user-email">Ваш e-mail:</label>
-					<input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа" required aria-required="true">
-				</p>
-				<p>
+				<div>
+					<p class="field-group">
+						<label for="user-name">Ваше имя:</label>
+						<input type="text" name="user-name" id="user-name" 
+						placeholder="Представьтесь, пожалуйста" required aria-required="true" autofocus>
+					</p>
+					<p class="field-group">
+						<label for="user-email">Ваш e-mail:</label>
+						<input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа" required aria-required="true">
+					</p>
+				</div>
+				<p class="textarea-group">
 					<label for="user-letter">Текст письма:</label>
-					<textarea name="user-letter" id="user-letter">В свободной форме</textarea>
+					<textarea name="user-letter" id="user-letter" placeholder="В свободной форме"></textarea>
 				</p>
-				<button class="active-effects__yellow" type="submit">Отправить</button>
+				<button class="active-effects-yellow" type="submit">Отправить</button>
 			</form>
 			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
 		</section>
