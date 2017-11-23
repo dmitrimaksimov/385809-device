@@ -216,6 +216,7 @@
 			<div class="container">
 				<h2 class="visually-hidden">Услуги</h2>
 				
+				
 				<input type="radio" id="radio-btn-4" name="toggle-services" checked>
 				<input type="radio" id="radio-btn-5" name="toggle-services">
 				<input type="radio" id="radio-btn-6" name="toggle-services">
@@ -292,14 +293,14 @@
 				<h2>Контакты</h2>
 				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. 
 				Всякое бывает.</p>
-				<a class="open-map-big">
+				<button class="open-map-big" id="modal-map-open" type="button">
 					<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222"
 					title="Открыть карту" tabindex="0">
-				</a>
-				<a class="company-contact-button active-effects-yellow" href="#">напишите нам</a>
+				</button>
+				<button class="company-contact-button active-effects-yellow" id="modal-write-us-open" type="button" onclick="handler1">напишите нам</button>
 			</section>
 		</section>
-		
+
 	</main>
 	
 	<footer class="main-footer">
@@ -344,7 +345,7 @@
 	</footer>
 	
 	<!-- модальное окно НАПИШИТЕ НАМ -->
-		<section class="modal-write-us">
+		<section class="modal-write-us" id="modal-write-us-id">
 			<h2 class="visually-hidden">Напишите нам</h2>			
 			<form class="write-us" action="#" method="post">
 				<div>
@@ -368,11 +369,9 @@
 		</section>
 		
 		<!-- модальное окно КАРТА -->
-		<section class="modal-map">
+		<section class="modal-map" id="modal-map-id">
 			<h2 class="visually-hidden">Как до нас добраться</h2>
-			<a class="modal-map" href="#">
-				<img src="img/map-big.jpg" alt="г. Москва, ул. Строителей, 15" width="960" height="559">
-			</a>
+			<iframe class="modal-map-img" src="https://yandex.ru/map-widget/v1/-/CBafiDamXD" width="960" height="559" frameborder="0"></iframe>
 			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
 		</section>
 

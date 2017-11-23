@@ -122,7 +122,7 @@ img {
 	position: relative;
 	
 	width: 1160px;
-	min-height: 226px;
+	padding-bottom: 55px;
 	
 	background-image: linear-gradient(#ffffff 40px, #f7e296 40px);
 }
@@ -449,6 +449,7 @@ img {
 	position: relative;
 	
 	width: 1160px;
+	padding-bottom: 110px;
 	
 	background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
 }
@@ -579,8 +580,6 @@ img {
 }
 
 .promo-data table {
-	margin-bottom: 100px;
-	
 	text-align: left;
 }
 
@@ -641,12 +640,13 @@ img {
 /* ========== section CATEGORIES DEVICES  ========== */
 
 .categories-devices {
-	min-height: 250px;
+	margin-bottom: 10px;
 }
 
-.categories-devices ul {
+.categories {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	
 	margin: 0;
 	padding: 0;
@@ -671,7 +671,7 @@ img {
 	position: relative;
 	
 	width: 160px;
-	min-height: 160px;
+	height: 160px;
 	margin-bottom: 34px;
 	
 	background-color: #f7e296;
@@ -703,6 +703,8 @@ img {
 /* ========== section SERVICES  ========== */
 
 .services {
+	padding-bottom: 100px;
+
 	background-image: linear-gradient(#ffffff 168px, #e5e5e5 168px);
 }
 
@@ -722,7 +724,6 @@ img {
 	padding: 0;
 	width: 280px;
 	padding-top: 12px;
-	margin-bottom: 140px;
 	padding-top: 147px;
 	
 	list-style: none;
@@ -773,7 +774,7 @@ img {
 	text-align: center;
 	
 	background-color: transparent;
-	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 	
 	cursor: pointer;
 }
@@ -798,7 +799,6 @@ img {
 
 .services-slider-frame {
 	width: 880px;
-	margin-bottom: 140px;
 	padding-top: 135px;	
 	
 	overflow: hidden;
@@ -877,8 +877,8 @@ img {
 /* ========== section BRANDES  ========== */
 
 .brandes {
-	min-height: 241px;
-	padding-top: 95px;
+	padding-top: 92px;
+	padding-bottom: 92px;
 }
 
 .brandes ul {
@@ -886,17 +886,12 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	
-	margin: 0;
-	padding: 0;
-	
 	font-size: 0;
-	
-	list-style: none;
 }
 
 .brandes li {
 	width: 260px;
-	min-height: 100px;
+	height: 100px;
 	
 	background-position: center;
 	background-repeat: no-repeat;
@@ -946,7 +941,9 @@ img {
 	display: flex;
 	justify-content: space-between;
 	
-	min-height: 590px;
+	padding-top: 50px;
+	padding-bottom: 85px;
+	/*min-height: 590px;*/
 }
 
 .company-contact-section {
@@ -967,7 +964,7 @@ img {
 .company-contact-section h2:before {
 	content: "";
 	position: absolute;
-	top: -52px;
+	top: -50px;
 	left: 0;
 	
 	width: 80px;
@@ -987,9 +984,7 @@ img {
 }
 
 .company-contact-section ul {
-	margin: 0;
-	padding: 0;
-	margin-bottom: 50px;
+	margin-bottom: 52px;
 	padding-left: 18px;
 	padding-top: 35px;
 	
@@ -1000,8 +995,6 @@ img {
 }
 
 .company-contact-button {
-	position: relative;
-	
 	display: block;
 	width: 260px;
 	min-height: 40px;
@@ -1010,34 +1003,29 @@ img {
 	padding: 9px 0;
 	box-sizing: border-box;
 	
-	line-height: normal;
+	font: inherit;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
 	text-transform: uppercase;
 	text-align: center;
-}
-
-.company-contact-button::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 0;
-	z-index: -1;
 	
-	width: 260px;
-	height: 8px;
+	border: none;
 	
-	background-color: #f0c52e;
-	
-	transform: translateY(-50%);
+	background-color: transparent;
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
 
 .open-map-big {
-	display: block;
 	margin: 0;
 	padding: 0;
-	padding-top: 10px;
-	margin-bottom: 58px;
+	width: 560px;
+	height: 222px;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	
+	border: none;
+	
+	background-color: #eaeaea;
 	
 	cursor: pointer;
 }
@@ -1045,7 +1033,8 @@ img {
 /* ==========  FOOTER  ========== */
 
 .main-footer {
-	min-height: 323px;
+	padding-top: 65px;
+	padding-bottom: 65px;
 	
 	color: #ffffff;
 	
@@ -1079,8 +1068,8 @@ img {
 	align-items: center;
 	width: 1160px;
 	margin: 0 auto;
-	padding-top: 65px;
-	margin-bottom: 15px;
+	
+	margin-bottom: 30px;
 }
 
 .footer-top-panel-navigation {
@@ -1145,11 +1134,13 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 35px;
+	margin-bottom: 61px;
 }
 
 .footer-middle-panel p {
 	width: 250px;
+	margin: 0;
+	padding: 0;
 }
 
 .footer-middle-panel p:last-child {
@@ -1275,22 +1266,31 @@ img {
 /* ==========  модальное окно WRITE US  ========== */
 
 .modal-write-us {
-	position: relative;
+	position: fixed;
+	z-index: 1;
+    left: 50%;
+    top: 50%;
 	
-	width: 860px;
+	display: none;
+	width: 960px;
 	height: 467px;
-	padding-left: 100px;
 	padding-top: 96px;
 	
 	background-color: #ffffff;
-	
 	/*box-shadow: 0 20px 0 20px #656565;*//* это если ie11 не поддерживает фильтр drop-shadow*/
 	filter: drop-shadow(0 10px 20px rgba(4, 6, 6, 0.2));
+	
+	transform: translate(-50%, -50%);
 }
 
 .modal-write-us p {
 	margin: 0;
 	padding: 0;
+}
+
+.write-us {
+	width: 760px;
+	margin: 0 auto;
 }
 
 .write-us label {
@@ -1369,7 +1369,7 @@ img {
 	padding: 0;
 	width: 200px;
 	min-height: 40px;
-	padding: 8px 0;
+	padding: 6px 0;
 	box-sizing: border-box;
 	
 	font-weight: 800;
@@ -1380,7 +1380,7 @@ img {
 	text-align: center;
 	
 	background-color: transparent;
-	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 	
 	border: none;
 }
@@ -1422,8 +1422,12 @@ img {
 /* ==========  модальное окно MAP  ========== */
 
 .modal-map {
-	position: relative;
+	position: fixed;	
+	z-index: 1;
+    left: 50%;
+    top: 50%;
 	
+	display: none;
 	width: 960px;
 	height: 559px;
 	
@@ -1431,15 +1435,20 @@ img {
 	line-height: 0;
 	
 	background-color: #e9e9e9;
+	background-image: url("../img/map-big.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	transform: translate(-50%, -50%);
 }
 
 
 /* ==========  страница CATALOG.HTML  ========== */
 
 .catalog-title {
-	margin: 0;
-	padding: 0;
 	padding-left: 60px;
+	margin-bottom: 42px;
 }
 
 .page-title {
@@ -1458,7 +1467,7 @@ img {
 	align-items: center;
 	margin: 0;
 	padding: 0;
-	margin-bottom: 40px;
+	
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 14px;
@@ -1811,7 +1820,7 @@ img {
 	padding: 0;
 	width: 200px;
 	min-height: 40px;
-	padding: 8px 0;
+	padding: 6px 0;
 	box-sizing: border-box;
 	
 	font-weight: 800;
@@ -1822,7 +1831,7 @@ img {
 	text-align: center;
 	
 	background-color: transparent;
-	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 	
 	border: none;
 }
@@ -1921,13 +1930,14 @@ img {
 /* ==========  section CATALOG  ========== */
 
 .catalog {
-	min-width: 832px;
+	padding-left: 72px;
+	padding-top: 69px;
+	padding-bottom: 78px;
 }
 
 .container-catalog {
 	margin: 0 auto;
-	padding-left: 72px;
-	padding-top: 68px;
+	
 	width:760px;
 }
 
@@ -1935,13 +1945,11 @@ img {
 
 .catalog-list {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	
 	margin: 0;
 	padding: 0;
 	width: 760px;
-	margin-bottom: 40px;
 	
 	list-style: none;
 }
@@ -1960,10 +1968,7 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	
-	margin: 0;
-	padding: 0;
 	width: 360px;
-	margin-bottom: 50px;
 }
 
 .catalog-list .catalog-item-name {
@@ -1979,6 +1984,20 @@ img {
 	font-weight: 300;
 	letter-spacing: 0.01em;
 	color: #464646;
+}
+
+.catalog-item {
+	margin-right: 40px;
+	margin-bottom: 50px;
+}
+
+.catalog-item:nth-child(2n) {
+	margin-right: 0;
+}
+
+.catalog-item:last-child,
+.catalog-item:nth-last-child(2) {
+	margin-bottom: 40px;
 }
 
 .catalog-item ul {
@@ -2021,7 +2040,7 @@ img {
 	line-height: normal;
 	
 	background-color: transparent;
-	background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+	background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
 
 .add-compare {
@@ -2116,7 +2135,6 @@ img {
 	min-height: 70px;
 	margin: 0;
 	padding: 0;
-	margin-bottom: 76px;
 	
 	background-color: #ebebeb;
 	
