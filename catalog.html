@@ -96,6 +96,8 @@
 					<li><a class="sorting-by-price page-current" href="#">По цене</a></li>
 					<li><a class="sorting-by-type" href="#">По типу</a></li>
 					<li><a class="sorting-by-popular" href="#">По популярности</a></li>
+				</ul>
+				<ul class="catalog-sorting-direct">
 					<li><a class="sorting-direction arrow-up" title="сортировать по возрастанию" href="#">сортировать по возрастанию</a></li>
 					<li><a class="sorting-direction arrow-down page-current" title="сортировать по убыванию" href="#">сортировать по убыванию</a></li>
 				</ul>
@@ -109,20 +111,32 @@
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтр товаров по характеристикам</h2>
 				<form class="catalog-filter-form" action="#" method="get">
-					<p>Стоимость</p>
-					<div class="catalog-filter-price-range" aria-disabled="false"><!-- дать фоном серую линию -->
-						<div class="price-range-range-marker"></div><!-- это зелёная линия указывающая диапазон -->
-						<!-- это левый "бегунок" -->
-						<button class="price-range-left-marker" type="button" title="нижний предел цены" tabindex="0">
-							<span class="visually-hidden">Нижний предел цены</span>
-						</button>
-						<input class="price-range-left-display" type="text" value="от 0">
-						<!-- это правый "бегунок" -->
-						<button class="price-range-right-marker" type="button" title="верхний предел цены" tabindex="0">
-							<span class="visually-hidden">Верхний предел цены</span>
-						</button>
-						<input class="price-range-right-display" type="text" value="до 5000">
-					</div>
+					
+					<fieldset>
+						<legend>Стоимость</legend>
+						<div class="catalog-filter-price">
+							<div class="catalog-filter-price-range" aria-disabled="false">
+								<div class="price-range-scale">
+									<div class="price-range-bar" style="margin-left: 2%; width: 57%;"></div>
+								</div>
+								<div class="toggle toggle-min">
+									<span class="visually-hidden">Нижний предел цены</span>
+								</div>
+								<div class="toggle toggle-max">
+									<span class="visually-hidden">Верхний предел цены</span>
+								</div>
+							</div>
+							<div class="catalog-filter-price-display">
+								<label class="min-price">от
+									<input name="min-price" type="text" value="0">
+								</label>
+								<label class="max-price">до
+									<input name="max-price" type="text" value="5000">
+								</label>
+							</div>
+						</div>
+					</fieldset>
+					
 					<fieldset>
 						<legend>Цвет</legend>
 						<ul>
@@ -163,6 +177,7 @@
 							</li>
 						</ul>
 					</fieldset>
+					
 					<fieldset>
 						<legend>Bluetooth</legend>
 						<ul>
@@ -182,6 +197,7 @@
 							</li>
 						</ul>
 					</fieldset>
+					
 					<button class="catalog-filter-btn active-effects-yellow" type="submit">Показать</button>
 				</form>
 			</section>

@@ -6,7 +6,7 @@ var modalMap = document.getElementById("modal-map-id");
 var openMap = document.getElementById("modal-map-open");
 var closeMap = document.getElementsByClassName("modal-close")[1];
 
-openWriteUs.onclick = function () {
+openWriteUs.onclick = function handlerWriteUs () {
 	modalWriteUs.style.display = "block";
 }
 
@@ -20,7 +20,7 @@ window.onclick = function () {
 	}
 }
 
-openMap.onclick = function () {
+openMap.onclick = function handlerMap () {
 	modalMap.style.display = "block";
 }
 
