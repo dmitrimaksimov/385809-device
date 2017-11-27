@@ -37,7 +37,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	min-width: 1200x;
 	
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
@@ -59,6 +58,8 @@ img {
 .container {
 	margin: 0 auto;
 	width: 1160px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .visually-hidden {
@@ -137,13 +138,13 @@ img {
 	position: relative;
 	
 	width: 1160px;
-	padding-bottom: 55px;
+	padding-bottom: 51px;
 	
-	background-image: -webkit-linear-gradient(#ffffff 40px, #f7e296 40px);
+	background-image: -webkit-linear-gradient(#ffffff 42px, #f7e296 42px);
 	
-	background-image: -o-linear-gradient(#ffffff 40px, #f7e296 40px);
+	background-image: -o-linear-gradient(#ffffff 42px, #f7e296 42px);
 	
-	background-image: linear-gradient(#ffffff 40px, #f7e296 40px);
+	background-image: linear-gradient(#ffffff 42px, #f7e296 42px);
 }
 
 .main-header ul,
@@ -176,8 +177,8 @@ img {
 	        align-items: center;
 	width: 1040px;
 	margin: 0 auto;
-	padding-top: 70px;
-	margin-bottom: 35px;
+	padding-top: 78px;
+	margin-bottom: 33px;
 }
 
 .header-top-panel input,
@@ -431,7 +432,7 @@ img {
 	position: absolute;
 	content: "";
 	top: 10px;
-	left: 220px;
+	left: 230px;
 	
 	width: 16px;
 	height: 2px;
@@ -507,6 +508,7 @@ img {
 	position: relative;
 	
 	width: 1160px;
+	padding-top: 2px;
 	
 	background-image: -webkit-linear-gradient(#f7e296 113px, #ffffff 113px);
 	
@@ -522,7 +524,7 @@ img {
 .promo-slider-controls {
 	position: absolute;
 	bottom: 250px;
-	right: 80px;
+	right: 75px;
 	z-index: 10;
 }
 
@@ -533,7 +535,7 @@ img {
 	vertical-align: middle;
     width: 10px;
     height: 10px;
-    margin: 0 10px;
+    margin: 0 8px;
 	
 	font-size: 0;
 	
@@ -560,7 +562,7 @@ img {
 	
 	display: none;
 	padding-left: 600px;
-	padding-bottom: 110px;
+	padding-bottom: 111px;
 	
 	background-repeat: no-repeat;
 }
@@ -597,8 +599,8 @@ img {
 
 .promo-counter {
 	position: absolute;
-	top: -32px;
-	right: 50px;
+	top: -34px;
+	right: 46px;
 	z-index: 1;
 	
 	font-size: 180px;
@@ -612,7 +614,7 @@ img {
 	
 	max-width: 560px;
 	padding-top: 78px;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 	
 	font-size: 47px;
 	letter-spacing: 0.01em;
@@ -632,20 +634,16 @@ img {
 
 .promo-slider-item a {
 	width: 220px;
-	margin-top: 44px;
-	margin-bottom: 50px;
+	margin-top: 43px;
+	margin-bottom: 48px;
 }
 
 .promo-slider-item table {
 	text-align: left;
 }
 
-.promo-slider-item tr {
-	margin-right: 80px;
-}
-
 .promo-slider-item th {
-	padding-top: 5px;
+	padding-top: 7px;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 13px;
@@ -709,7 +707,7 @@ img {
 /* ========== section CATEGORIES DEVICES  ========== */
 
 .categories-devices {
-	margin-bottom: 10px;
+	padding-bottom: 16px;
 }
 
 .categories {
@@ -729,7 +727,7 @@ img {
 }
 
 .categories-devices a {
-	width: 160px;
+	text-align: left;
 }
 
 .categories-devices h3 {
@@ -753,17 +751,20 @@ img {
 
 .categories-item img {
 	position: absolute;
-	top: 50%;
+	bottom: 50%;
 	left: 50%;
-	
-	font-size: 0;
-	line-height: 0;
 	
 	-webkit-transform: translate(-50%, -50%);
 	
 	    -ms-transform: translate(-50%, -50%);
 	
-	        transform: translate(-50%, -50%);
+	        transform: translate(-50%, 50%);
+}
+
+.categories li:nth-child(2) img {
+	left: 50%;
+	bottom: 2px;
+	transform: translateX(-50%);
 }
 
 .categories-devices a:hover .categories-item {
@@ -806,7 +807,7 @@ img {
 	padding: 0;
 	width: 280px;
 	padding-top: 147px;
-	padding-bottom: 147px;
+	padding-bottom: 139px;
 	
 	list-style: none;
 }
@@ -814,11 +815,11 @@ img {
 .services-slider-controls::after {
 	position: absolute;
 	content: "";
-	top: 220px;
+	top: 224px;
 	right: -160px;
 	
 	width: 318px;
-	height: 8px;
+	height: 7px;
 	
 	background-color: #000000;
 	
@@ -833,7 +834,7 @@ img {
 	display: block;
 	width: 280px;
 	height: 40px;
-	margin: 20px 0;
+	margin: 25px 0;
 }
 
 .services-slider-controls li:first-child {
@@ -885,24 +886,24 @@ img {
 	display: none;
 	width: 760px;
 	padding-top: 135px;
-	padding-bottom: 147px;
+	padding-bottom: 139px;
 	
 	background-repeat: no-repeat;
 }
 
 .services-slider-item:nth-child(1) {
 	background-image: url("../img/service-delivery.svg");
-	background-position: 550px 153px;
+	background-position: 558px 153px;
 }
 
 .services-slider-item:nth-child(2) {
 	background-image: url("../img/service-warranty.svg");
-	background-position: 550px 129px;
+	background-position: 558px 129px;
 }
 
 .services-slider-item:nth-child(3) {
 	background-image: url("../img/service-credit.svg");
-	background-position: 550px 129px;
+	background-position: 558px 129px;
 }
 
 .services-slider-item h2 {
@@ -956,8 +957,8 @@ img {
 /* ========== section BRANDES  ========== */
 
 .brandes {
-	padding-top: 92px;
-	padding-bottom: 92px;
+	padding-top: 94px;
+	padding-bottom: 94px;
 }
 
 .brandes ul {
@@ -970,6 +971,8 @@ img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	margin: 0;
+	padding: 0;
 	
 	font-size: 0;
 }
@@ -1030,12 +1033,12 @@ img {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	
-	padding-top: 50px;
-	padding-bottom: 85px;
+	padding-top: 46px;
+	padding-bottom: 82px;
 }
 
 .company-contact-section {
-	width: 580px;
+	width: 560px;
 }
 
 .company-contact-section h2 {
@@ -1043,7 +1046,7 @@ img {
 	
 	margin: 0;
 	padding: 0;
-	margin-bottom: 30px;
+	margin-bottom: 38px;
 	
 	font-size: 47px;
 	letter-spacing: 0.01em;
@@ -1052,11 +1055,11 @@ img {
 .company-contact-section h2:before {
 	content: "";
 	position: absolute;
-	top: -50px;
+	top: -47px;
 	left: 0;
 	
 	width: 80px;
-	height: 8px;
+	height: 7px;
 	
 	background-color: #000000;
 }
@@ -1071,15 +1074,37 @@ img {
 	color: #464646;
 }
 
+.about-us-left {
+	max-width: 480px;
+}
+
 .company-contact-section ul {
-	margin-bottom: 52px;
-	padding-left: 18px;
-	padding-top: 35px;
+	margin-bottom: 54px;
+	padding-left: 35px;
+	padding-top: 36px;
 	
 	font-size: 16px;
 	line-height: 40px;
 	
-	list-style:circle;
+	list-style: none;
+}
+
+.company-contact-section li {
+	position: relative;
+}
+
+.company-contact-section li::before {
+	content: "";
+	position: absolute;
+	top: 16px;
+	left: -35px;
+	
+	width: 4px;
+	height: 4px;
+	background-image: #ffffff;
+	
+	border: 2px solid #e5e5e5;
+	border-radius: 50%;
 }
 
 .company-contact-button {
@@ -1092,7 +1117,7 @@ img {
 	width: 560px;
 	height: 222px;
 	margin-top: 10px;
-	margin-bottom: 60px;
+	margin-bottom: 68px;
 	
 	border: none;
 	
@@ -1104,7 +1129,7 @@ img {
 /* ==========  FOOTER  ========== */
 
 .main-footer {
-	padding-top: 65px;
+	padding-top: 60px;
 	padding-bottom: 65px;
 	
 	color: #ffffff;
@@ -1145,8 +1170,26 @@ img {
 	        align-items: center;
 	width: 1160px;
 	margin: 0 auto;
+	padding: 0;
+	margin-bottom: 37px;
+}
+
+.logo-footer-container {
+	position: relative;
 	
-	margin-bottom: 30px;
+	margin: 0;
+	padding: 0;
+	width: 163px;
+	height: 36px;
+}
+
+.logo-footer {
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	
+	width: 163px;
+	height: 36px;
 }
 
 .footer-top-panel-navigation {
@@ -1159,8 +1202,7 @@ img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	width: 360px;
-	min-height: 36px;
+	width: 360px;	
 }
 
 .footer-top-panel-navigation a {
@@ -1223,7 +1265,7 @@ img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin-bottom: 61px;
+	margin-bottom: 58px;
 }
 
 .footer-middle-panel p {
@@ -1279,7 +1321,7 @@ img {
 	left: 0;
 	
 	width: 80px;
-	height: 8px;
+	height: 7px;
 	
 	background-color: #ffc600;
 }
@@ -1348,6 +1390,11 @@ img {
 
 .footer-social-buttons a:active {
 	opacity: 0.1;
+}
+
+.footer-decor {
+	width: 27px;
+	height: 35px;
 }
 
 .logo-academy {
@@ -1563,14 +1610,14 @@ img {
 
 .catalog-title {
 	padding-left: 60px;
-	margin-bottom: 42px;
+	margin-bottom: 40px;
 }
 
 .page-title {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 20px;
-	padding-top: 30px;
+	margin-bottom: 12px;
+	padding-top: 32px;
 	
 	font-size: 47px;
 	letter-spacing: 0.01em;
@@ -1829,6 +1876,7 @@ img {
 
 .filters {
 	min-width: 328px;
+	padding-top: 82px;
 	
 	background-color: #efefef;
 }
@@ -1838,15 +1886,23 @@ img {
 .catalog-filter-form {
 	width: 200px;
 	padding-left: 60px;
-	padding-top: 68px;
+	
 }
 
 .catalog-filter-form fieldset {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 40px;	
+	margin-bottom: 40px;
 	
 	border: none;
+}
+
+.catalog-filter-form fieldset:nth-child(2) {
+	margin-bottom: 45px;
+}
+
+.catalog-filter-form fieldset:nth-child(3) {
+	margin-bottom: 32px;
 }
 
 .catalog-filter-form legend {
@@ -1859,6 +1915,7 @@ img {
 .catalog-filter-form ul {
 	margin: 0;
 	padding: 0;
+	padding-top: 18px;
 	
 	list-style: none;
 }
@@ -1880,7 +1937,7 @@ img {
 }
 
 .catalog-filter-price {
-	margin-bottom: 60px;
+	margin-bottom: 8px;
 }
 
 .catalog-filter-price-range {
@@ -1905,7 +1962,7 @@ img {
 
 .catalog-filter-price-range .toggle {
 	position: absolute;
-	top: 27px;
+	top: 26px;
 	
 	width: 4px;
 	height: 4px;
@@ -1970,7 +2027,7 @@ img {
 }
 
 .filter-option label {
-	padding-left: 40px;
+	padding-left: 38px;
 	
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 14px;
@@ -2012,7 +2069,7 @@ img {
 .checkbox-indicator {
 	position: absolute;
 	top: 50%;
-	left: 0;
+	left: -2px;
 	
 	display: block;
 	width: 23px;
@@ -2041,7 +2098,7 @@ img {
 .radio-indicator {
 	position: absolute;
 	top: 50%;
-	left: 0;
+	left: -2px;
 	
 	display: block;
 	width: 25px;
@@ -2110,9 +2167,9 @@ img {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 	
 	width: 360px;
 }
@@ -2143,7 +2200,7 @@ img {
 
 .catalog-item:last-child,
 .catalog-item:nth-last-child(2) {
-	margin-bottom: 40px;
+	margin-bottom: 37px;
 }
 
 .catalog-item ul {
@@ -2311,7 +2368,7 @@ img {
 .back-forward a {
 	display: block;
 	width: 126px;
-	min-height: 70px;
+	height: 70px;
 	
 	font-size: 16px;
 	letter-spacing: 0.2em;
@@ -2336,9 +2393,9 @@ img {
 }
 
 .pagination-list li:first-child {
-	margin-right: 200px;
+	margin-right: 190px;
 }
 
 .pagination-list li:last-child {
-	margin-left: 200px;
+	margin-left: 190px;
 }

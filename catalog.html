@@ -7,61 +7,63 @@
 	<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-		
-	<header class="main-header container">
-		<a class="logo-header active-effects-black" href="index.html">
-			<img src="img/logo-header.png" alt="DEVICE" width="163" height="36">
-		</a>
-		<!-- верхняя панель: поиск, авторизация, корзина и т.д. -->
-		<div class="header-top-panel">
-			<form class="header-search-form" action="#" method="post">
-				<p class="search-group">
-					<label class="visually-hidden" for="header-search">Поиск по сайту</label>
-					<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
-					<input type="submit" value="Найти">
-				</p>
-			</form>
-			<div class="header-top-panel-navigation">
-				<ul class="header-user-navigation">
-					<li>
-						<a class="header-user-name active-effects-black" href="#">Валентин Петухов</a>
-					</li>
-					<li>
-						<a class="header-user-logout active-effects-black" href="#">Выйти</a>
-					</li>
-				</ul>
-				<a class="header-compare active-effects-black" href="#">Сравнить</a>
-				<a class="header-cart active-effects-black" href="#">Корзина</a>				
+	<div class="container">	
+		<header class="main-header">
+			<a class="logo-header active-effects-black" href="index.html">
+				<img src="img/logo-header.png" alt="DEVICE" width="163" height="36">
+			</a>
+			<!-- верхняя панель: поиск, авторизация, корзина и т.д. -->
+			<div class="header-top-panel">
+				<form class="header-search-form" action="#" method="post">
+					<p class="search-group">
+						<label class="visually-hidden" for="header-search">Поиск по сайту</label>
+						<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
+						<input type="submit" value="Найти">
+					</p>
+				</form>
+				<div class="header-top-panel-navigation">
+					<ul class="header-user-navigation">
+						<li>
+							<a class="header-user-name active-effects-black" href="#">Валентин Петухов</a>
+						</li>
+						<li>
+							<a class="header-user-logout active-effects-black" href="#">Выйти</a>
+						</li>
+					</ul>
+					<a class="header-compare active-effects-black" href="#">Сравнить</a>
+					<a class="header-cart active-effects-black" href="#">Корзина</a>				
+				</div>
 			</div>
-		</div>
-		<!-- главное меню -->
-		<nav class="header-main-navigation">
-			<ul class="site-nav">
-				<li><a class="active-effects-black" href="#" aria-haspopup="true">Каталог товаров</a><span></span>
-					<!-- выпадающее подменю -->
-					<div class="main-navigation-sub-menu">
-						<ul class="sub-menu-column-1">
-							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Виртуальная реальность</a></li>
-							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Моноподы для селфи</a></li>
-							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Экшн-камеры</a></li>
-						</ul>
-						<ul class="sub-menu-column-2">
-							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Фитнес-браслеты</a></li>
-							<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Умные часы</a></li>
-						</ul>
-						<ul class="sub-menu-column-3">
-							<li>
-								<a class="active-effects-black" href="catalog.html" tabindex="-1">Квадрокоптеры</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li><a class="active-effects-black" href="#">Доставка</a></li>
-				<li><a class="active-effects-black" href="#">Гарантия</a></li>
-				<li><a class="active-effects-black" href="#">Контакты</a></li>
-			</ul>
-		</nav>
-	</header>
+			<!-- главное меню -->
+			<nav class="header-main-navigation">
+				<ul class="site-nav">
+					<li><a class="active-effects-black" href="#" aria-haspopup="true">Каталог товаров</a><span></span>
+						<!-- выпадающее подменю -->
+						<div class="main-navigation-sub-menu">
+							<ul class="sub-menu-column-1">
+								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Виртуальная реальность</a></li>
+								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Моноподы для селфи</a></li>
+								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Экшн-камеры</a></li>
+							</ul>
+							<ul class="sub-menu-column-2">
+								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Фитнес-браслеты</a></li>
+								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Умные часы</a></li>
+							</ul>
+							<ul class="sub-menu-column-3">
+								<li>
+									<a class="active-effects-black" href="catalog.html" tabindex="-1">Квадрокоптеры</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a class="active-effects-black" href="#">Доставка</a></li>
+					<li><a class="active-effects-black" href="#">Гарантия</a></li>
+					<li><a class="active-effects-black" href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+	</div>
 		
 	<main>
 	
@@ -317,9 +319,11 @@
 	<footer class="main-footer">
 		<div class="container">
 			<div class="footer-top-panel">
-				<a class="logo-footer active-effects-black" href="index.html">
-					<img src="img/logo-footer.png" alt="DEVICE" width="163" height="36">
-				</a>
+				<div class="logo-footer-container">
+					<a class="logo-footer">
+						<img src="img/logo-footer.png" alt="DEVICE" width="163" height="36">
+					</a>
+				</div>
 				<ul class="footer-top-panel-navigation">
 					<li>
 						<a class="footer-user-login" href="#">Войти</a>
