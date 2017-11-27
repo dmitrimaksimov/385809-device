@@ -82,7 +82,7 @@
 					<h2>Делай селфи,<br>как Бен Стиллер!</h2>
 					<p class="promo-description">Самая длинная палка для селфи доступна в нашем магазине.<br>
 					Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-					<a class="active-effects-yellow" href="#">подробнее</a>
+					<a class="button-link active-effects-yellow" href="#">подробнее</a>
 					<table>
 						<caption class="visually-hidden">Характеристики палки для селфи</caption>
 						<tr>
@@ -103,7 +103,7 @@
 					<h2>Худеем<br>правильно!</h2>
 					<p class="promo-description">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> 
 					не пропускать занятия и соблюдать диету.</p>
-					<a class="active-effects-yellow" href="#">подробнее</a>
+					<a class="button-link active-effects-yellow" href="#">подробнее</a>
 					<table>
 						<caption class="visually-hidden">Характеристики фитнес-браслета</caption>
 						<tr>
@@ -124,7 +124,7 @@
 					<h2>Порхает как бабочка,<br>жалит как пчела!</h2>
 					<p class="promo-description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> 
 					мощным лазером, замаскированным под стандартную камеру.</p>
-					<a class="active-effects-yellow" href="#">подробнее</a>
+					<a class="button-link active-effects-yellow" href="#">подробнее</a>
 					<table>
 						<caption class="visually-hidden">Характеристики квадрокоптера</caption>
 						<tr>
@@ -199,21 +199,19 @@
 		
 		<section class="services">
 			<div class="container">
-				<h2 class="visually-hidden">Услуги</h2>
-				
-				
+				<h2 class="visually-hidden">Услуги</h2>				
 				<input type="radio" id="radio-btn-4" name="toggle-services" checked>
 				<input type="radio" id="radio-btn-5" name="toggle-services">
 				<input type="radio" id="radio-btn-6" name="toggle-services">
 				<ul class="services-slider-controls">
 					<li>
-						<label for="radio-btn-4">доставка</label>
+						<label class="button-link" for="radio-btn-4">доставка</label>
 					</li>
 					<li>
-						<label for="radio-btn-5">гарантия</label>
+						<label class="button-link" for="radio-btn-5">гарантия</label>
 					</li>
 					<li>
-						<label for="radio-btn-6">кредит</label>
+						<label class="button-link" for="radio-btn-6">кредит</label>
 					</li>
 				</ul>
 				
@@ -235,37 +233,6 @@
 					</li>
 				</ul>
 				
-				
-				
-				<!--
-				<div class="services-slider-frame">
-					<div class="services-slader-slides">
-						<div class="services-slide-item clearfix">
-							<div>
-								<h2>Доставка</h2>
-								<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
-								Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-							</div>
-							<img src="img/service-delivery.svg" alt="доставка" width="136" height="164">
-						</div>
-						<div class="services-slide-item clearfix">
-							<div>
-								<h2>Гарантия</h2>
-								<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, 
-								мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
-							</div>
-							<img src="img/service-warranty.svg" alt="гарантия" width="171" height="194">
-						</div>
-						<div class="services-slide-item clearfix">
-							<div>
-								<h2>Кредит</h2>
-								<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
-								условия кредита. Выгодные для нашего банка, разумеется.</p>
-							</div>
-							<img src="img/service-credit.svg" alt="кредит" width="156" height="186">
-						</div>
-					</div>
-				</div>-->
 			</div>
 		</section>
 		
@@ -292,7 +259,7 @@
 					<li>Автотрейдинг</li>
 					<li>ЖелДорЭкспедиция</li>
 				</ul>
-				<a class="company-contact-button active-effects-yellow" href="#">подробнее о нас</a>
+				<a class="company-contact-button button-link active-effects-yellow" href="#">подробнее о нас</a>
 			</section>
 			<!-- раздел КОНТАКТЫ -->
 			<section class="company-contact-section">
@@ -303,7 +270,7 @@
 					<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222"
 					title="Открыть карту" tabindex="0">
 				</button>
-				<button class="company-contact-button active-effects-yellow" id="modal-write-us-open" type="button">напишите нам</button>
+				<button class="company-contact-button button-link active-effects-yellow" id="modal-write-us-open" type="button">напишите нам</button>
 			</section>
 		</section>
 
@@ -358,18 +325,18 @@
 					<p class="field-group">
 						<label for="user-name">Ваше имя:</label>
 						<input type="text" name="user-name" id="user-name" 
-						placeholder="Представьтесь, пожалуйста" required aria-required="true" autofocus>
+						placeholder="Представьтесь, пожалуйста" aria-required="true" autofocus>
 					</p>
 					<p class="field-group">
 						<label for="user-email">Ваш e-mail:</label>
-						<input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа" required aria-required="true">
+						<input type="email" name="user-email" id="user-email" placeholder="Для отправки ответа" aria-required="true">
 					</p>
 				</div>
 				<p class="textarea-group">
 					<label for="user-letter">Текст письма:</label>
 					<textarea name="user-letter" id="user-letter" placeholder="В свободной форме"></textarea>
 				</p>
-				<button class="active-effects-yellow" type="submit">Отправить</button>
+				<button class="button-link active-effects-yellow" type="submit">Отправить</button>
 			</form>
 			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
 		</section>
