@@ -71,9 +71,9 @@
 			
 				<section class="promo">
 					<h2 class="visually-hidden">Хиты продаж</h2>
-					<input type="radio" id="radio-btn-1" name="toggle-promo" checked>
-					<input type="radio" id="radio-btn-2" name="toggle-promo">
-					<input type="radio" id="radio-btn-3" name="toggle-promo">
+						<input type="radio" id="radio-btn-1" name="toggle-promo" checked>
+						<input type="radio" id="radio-btn-2" name="toggle-promo">
+						<input type="radio" id="radio-btn-3" name="toggle-promo">
 					<div class="promo-slider-controls">
 						<label for="radio-btn-1">Самая длинная палка для селфи</label>
 						<label for="radio-btn-2">Мотивирующие фитнес-браслеты</label>
@@ -272,13 +272,13 @@
 					<!-- раздел КОНТАКТЫ -->
 					<section class="company-contact-section">
 						<h2>Контакты</h2>
-						<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. 
+						<p class="contact-right">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. 
 						Всякое бывает.</p>
-						<button class="open-map-big" id="modal-map-open" type="button">
+						<a class="open-map-big" id="modal-map-open" href="map.html">
 							<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222"
 							title="Открыть карту" tabindex="0">
-						</button>
-						<button class="company-contact-button button-link active-effects-yellow" id="modal-write-us-open" type="button">напишите нам</button>
+						</a>
+						<a class="company-contact-button button-link active-effects-yellow" id="modal-write-us-open" href="writeus.html">напишите нам</a>
 					</section>
 				</section>
 				
@@ -330,7 +330,7 @@
 	</footer>
 	
 	<!-- модальное окно НАПИШИТЕ НАМ -->
-		<section class="modal-write-us" id="modal-write-us-id">
+		<section class="modal modal-write-us" id="modal-write-us-id">
 			<h2 class="visually-hidden">Напишите нам</h2>			
 			<form class="write-us" action="#" method="post">
 				<div>
@@ -354,7 +354,7 @@
 		</section>
 		
 		<!-- модальное окно КАРТА -->
-		<section class="modal-map" id="modal-map-id">
+		<section class="modal modal-map" id="modal-map-id">
 			<h2 class="visually-hidden">Как до нас добраться</h2>
 			<iframe class="modal-map-img" src="https://yandex.ru/map-widget/v1/-/CBafiDamXD" width="960" height="559"></iframe>
 			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
