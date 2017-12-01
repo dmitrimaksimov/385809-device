@@ -1,5 +1,3 @@
-//  открытие модальных окон
-
 var openMap = document.querySelector(".open-map-big");
 var modalMap = document.querySelector(".modal-map");
 var closeMap = document.querySelector(".close-map");
@@ -57,8 +55,6 @@ closeWriteUs.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	modalWriteUs.classList.remove("modal-show");
 });
-
-// проверяем заполнение полей формы перед отправкой
 
 formWriteUs.addEventListener("submit", function(evt) {
 	if (!userWriteUs.value) {

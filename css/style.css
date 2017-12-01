@@ -97,8 +97,6 @@ img {
 	cursor: pointer;
 }
 
-/* ===  эффекты при наведении и клике  === */
-
 .active-effects-black:hover,
 .active-effects-black:focus {
 	opacity: 0.6;
@@ -133,8 +131,6 @@ img {
 	cursor: pointer;
 }
 
-/* ==========  HEADER  ========== */
-
 .main-header {
 	position: relative;
 	
@@ -164,8 +160,6 @@ img {
 	top: 23px;
 }
 
-/* ===  верхнее меню в HEADER  === */
-
 .header-top-panel {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -191,8 +185,6 @@ img {
 	letter-spacing: 0.01em;
 	color: rgba(0, 0, 0, 1);
 }
-
-/* ===  форма "поиск по сайту" в HEADER  === */
 
 .header-search-form {
 	display: -webkit-box;
@@ -289,8 +281,6 @@ img {
 	background-color: #000000;
 }
 
-/* ===  верхнее меню в HEADER  === */
-
 .header-top-panel-navigation {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -378,8 +368,6 @@ img {
 	background-repeat: no-repeat;
 }
 
-/* ===  навигация по сайту в HEADER  === */
-
 .header-main-navigation {
 	width: 1040px;
 	margin: 0 auto;
@@ -450,8 +438,6 @@ img {
 	        transform: rotate(90deg);
 }
 
-/* ===  выпадающее подменю  === */
-
 .main-navigation-sub-menu {	
 	position: absolute;
 	top: 20px;
@@ -503,8 +489,6 @@ img {
 .site-nav li:first-child:focus .main-navigation-sub-menu {
 	visibility: visible;
 }
-
-/* ========== section PROMO SLIDER  ========== */
 
 .promo {
 	position: relative;
@@ -710,8 +694,6 @@ img {
 	display: block;
 }
 
-/* ========== section CATEGORIES DEVICES  ========== */
-
 .categories-devices {
 	padding-bottom: 17px;
 }
@@ -787,8 +769,6 @@ img {
 .categories-devices a:active .categories-item img {
 	opacity: 0.3;
 }
-
-/* ========== section SERVICES  ========== */
 
 .services {
 	background-image: -webkit-linear-gradient(#ffffff 168px, #e5e5e5 168px);
@@ -966,8 +946,6 @@ img {
 	display: block;
 }
 
-/* ========== section BRANDES  ========== */
-
 .brandes {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -1036,8 +1014,6 @@ img {
 .brand-4:focus {
 	background-image: url("../img/logo-4-color.png");	
 }
-
-/* ========== section COMPANY CONTACT  ========== */
 
 .company-contact {
 	display: -webkit-box;
@@ -1147,8 +1123,6 @@ img {
 	
 	cursor: pointer;
 }
-
-/* ==========  FOOTER  ========== */
 
 .main-footer {
 	padding-top: 60px;
@@ -1442,8 +1416,6 @@ img {
 .logo-academy:active {
 	opacity: 0.3;
 }
-
-/* ==========  модальные окна WRITE US и MAP  ========== */
 
 .modal {
 	position: fixed;
@@ -1760,8 +1732,6 @@ img {
   }
 }
 
-/* ==========  страница CATALOG.HTML  ========== */
-
 .catalog-title {
 	padding-left: 60px;
 	margin-bottom: 40px;
@@ -1834,8 +1804,6 @@ img {
 	opacity: 0.1;
 }
 
-/* ==========  MAIN страницы CATALOG.HTML  ========== */
-
 .catalog-decor-header {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1865,7 +1833,7 @@ img {
 	font-size: 16px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
-	line-height: 70px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: 70px;
 	
 	background-color: #dbdbdb;
 }
@@ -1896,8 +1864,6 @@ img {
 	text-transform: uppercase;
 	line-height: 18px;
 }
-
-/* ===  сортировка  === */
 
 .catalog-sorting {
 	display: -webkit-box;
@@ -2013,8 +1979,6 @@ img {
 	background-repeat: no-repeat;
 }
 
-/* ===  раздел с фильтром и ассортиментом товаров  === */
-
 .choice-of-devices {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2038,8 +2002,6 @@ img {
 	
 	background-color: #efefef;
 }
-
-/* ===  форма-фильтр выбора по параметрам  === */
 
 .catalog-filter-form {
 	width: 200px;
@@ -2280,8 +2242,6 @@ img {
 	background-image: url("../img/radio-on.svg");
 }
 
-/* ==========  section CATALOG  ========== */
-
 .catalog {
 	padding-left: 72px;
 	padding-top: 69px;
@@ -2293,8 +2253,6 @@ img {
 	
 	width:760px;
 }
-
-/* ===  каталог товаров  === */
 
 .catalog-list {
 	display: -webkit-box;
@@ -2426,11 +2384,9 @@ img {
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	text-align: center;
-	line-height: 16px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: 16px;
 	
-	color: rgba(0, 0, 0, 0.2);
-	
-	
+	color: rgba(0, 0, 0, 0.2);	
 }
 
 .catalog-list .new-item::after {
@@ -2498,9 +2454,6 @@ img {
 	opacity: 0.7;
 }
 
-
-/* ===  пагинация  === */
-
 .pagination-list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2553,7 +2506,7 @@ img {
 	text-transform: uppercase;
 	color: rgba(0, 0, 0, 1);
 	text-align: center;
-	line-height: 70px;/* в макете этот параметр не указан. задал его по высоте блока, т.к. иначе строчка не центрируется */
+	line-height: 70px;
 }
 
 .back-forward a:hover,
