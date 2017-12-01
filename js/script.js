@@ -1,38 +1,90 @@
 //  открытие модальных окон
-var modalWriteUs = document.getElementById("modal-write-us-id");
-var openWriteUs = document.getElementById("modal-write-us-open");
-var closeWriteUs = document.getElementsByClassName("modal-close")[0];
 
-var modalMap = document.getElementById("modal-map-id");
-var openMap = document.getElementById("modal-map-open");
-var closeMap = document.getElementsByClassName("modal-close")[1];
+var openMap = document.querySelector(".open-map-big");
+var modalMap = document.querySelector(".modal-map");
+var closeMap = document.querySelector(".close-map");
 
-openWriteUs.onclick = function() {
-	event.preventDefault();
-	modalWriteUs.style.display = "block";
-}
+var openWriteUs = document.querySelector(".open-write-us");
+var modalWriteUs = document.querySelector(".modal-write-us");
+var closeWriteUs = document.querySelector(".close-write-us");
 
-closeWriteUs.onclick = function() {
-	modalWriteUs.style.display = "none";
-}
+var formWriteUs = modalWriteUs.querySelector("form");
+var userWriteUs = modalWriteUs.querySelector("[name=user-name]");
+var emailWriteUs = modalWriteUs.querySelector("[name=user-email]");
+var letterWriteUs = modalWriteUs.querySelector("[name=user-letter]");
 
-window.onclick = function() {
-	if(event.target == modalWriteUs) {
-		modalWriteUs.style.display = "none";
+var storageName = localStorage.getItem("userName");
+var storageEmail = localStorage.getItem("userEmail");
+
+openMap.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	modalMap.classList.add("modal-show");
+});
+
+closeMap.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	modalMap.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function(evt) {
+	if (evt.keyCode === 27) {
+		if (modalMap.classList.contains("modal-show")) {
+			modalMap.classList.remove("modal-show");
+		}
+		if (modalWriteUs.classList.contains("modal-show")) {
+			modalWriteUs.classList.remove("modal-show");
+		}
 	}
-}
+});
 
-openMap.onclick = function handlerMap() {
-	event.preventDefault();
-	modalMap.style.display = "block";
-}
-
-closeMap.onclick = function() {
-	modalMap.style.display = "none";
-}
-
-window.onclick = function() {
-	if(event.target == modalWriteUs) {
-		modalMap.style.display = "none";
+openWriteUs.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	modalWriteUs.classList.add("modal-show");
+	
+	if (storageName) {
+		userWriteUs.value = storageName;
+		emailWriteUs.focus();
+	} else {
+		userWriteUs.focus();
 	}
-}
+	if (storageName && storageEmail) {
+		emailWriteUs.value = storageEmail;
+		letterWriteUs.focus();
+	}
+});
+
+closeWriteUs.addEventListener("click", function(evt) {
+	evt.preventDefault();
+	modalWriteUs.classList.remove("modal-show");
+});
+
+// проверяем заполнение полей формы перед отправкой
+
+formWriteUs.addEventListener("submit", function(evt) {
+	if (!userWriteUs.value) {
+		evt.preventDefault();
+		userWriteUs.classList.remove("modal-error");
+		userWriteUs.offsetWidth = userWriteUs.offsetWidth;
+		userWriteUs.classList.add("modal-error");
+		userWriteUs.classList.add("write-us-invalid");
+	} else {
+		localStorage.setItem("userName", userWriteUs.value);
+	}	
+	if (!emailWriteUs.value) {
+		evt.preventDefault();
+		emailWriteUs.classList.remove("modal-error");
+		emailWriteUs.offsetWidth = userWriteUs.offsetWidth;
+		emailWriteUs.classList.add("modal-error");
+		emailWriteUs.classList.add("write-us-invalid");
+	} else {
+		localStorage.setItem("userEmail", emailWriteUs.value);
+	}
+});
+
+userWriteUs.addEventListener("focus", function() {
+	userWriteUs.classList.remove("write-us-invalid");
+});
+
+emailWriteUs.addEventListener("focus", function() {
+	emailWriteUs.classList.remove("write-us-invalid");
+});

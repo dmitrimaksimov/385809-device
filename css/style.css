@@ -37,6 +37,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	min-width: 1200px;
 	
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
@@ -1360,6 +1361,7 @@ img {
 	        align-items: center;
 	
 	width: 142px;
+	margin: auto;
 	
 	font-size: 0;
 }
@@ -1380,7 +1382,7 @@ img {
 
 .social-btn-fb {
 	background-image: url("../img/social-facebook.svg");
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	
 	opacity: 0.3;
@@ -1389,7 +1391,7 @@ img {
 
 .social-btn-insta {
 	background-image: url("../img/social-instagram.svg");
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	
 	opacity: 0.3;
@@ -1398,7 +1400,7 @@ img {
 
 .social-btn-twtr {
 	background-image: url("../img/social-twitter.svg");
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	
 	opacity: 0.3;
@@ -1459,6 +1461,33 @@ img {
 	    -ms-transform: translate(-50%, -50%);
 	
 	        transform: translate(-50%, -50%);
+}
+
+.modal-map {
+	width: 960px;
+	height: 559px;
+	
+	font-size: 0;
+	line-height: 0;
+	
+	background-color: #e9e9e9;
+}
+
+.modal-map iframe {
+	position: relative;
+	z-index: 2;
+	
+	border: none;
+}
+
+.modal-map p {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	
+	margin: 0;
+	padding: 0;
 }
 
 .modal-write-us {	
@@ -1561,6 +1590,10 @@ img {
 	background-color: #f6dada;
 }
 
+.write-us .write-us-invalid {
+	background-color: #f6dada;
+}
+
 .write-us button {
 	width: 200px;
 }
@@ -1569,6 +1602,7 @@ img {
 	position: absolute;
 	top: 22px;
 	right: 22px;
+	z-index: 3;
 	
 	margin: 0;
 	padding: 0;
@@ -1599,22 +1633,131 @@ img {
 	opacity: 0.3;
 }
 
-.modal-map {
-	width: 960px;
-	height: 559px;
+.modal-show {
+	display: block;
 	
-	font-size: 0;
-	line-height: 0;
+	-webkit-animation: open 0.5s;
 	
-	background-color: #e9e9e9;
-	background-image: url("../img/map-big.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	        animation: open 0.5s;
 }
 
-.modal-map iframe {
-	border: none;
+.modal-error {
+	-webkit-animation: error 0.5s;
+	        animation: error 0.5s;
+}
+
+@-webkit-keyframes open {
+	0% {
+		-webkit-transform: scale(0) rotate(0);
+		        transform: scale(0) rotate(0);
+	}
+	
+	25% {
+		-webkit-transform: scale(0.25) rotate(1080deg) translateY(-50%);
+		        transform: scale(0.25) rotate(1080deg) translateY(-50%);
+	}
+	
+	50% {
+		-webkit-transform: scale(0.5) rotate(720deg) translateY(-50%);
+		        transform: scale(0.5) rotate(720deg) translateY(-50%);
+	}
+	
+	75% {
+		-webkit-transform: scale(0.75) rotate(360deg) translateY(-50%);
+		        transform: scale(0.75) rotate(360deg) translateY(-50%);
+	}
+	
+	90% {
+		-webkit-transform: scale(1.1) rotate(0) translateY(-50%);
+		        transform: scale(1.1) rotate(0) translateY(-50%);
+	}
+	
+	100% {
+		-webkit-transform: scale(1) rotate(0) translateY(-50%);
+		        transform: scale(1) rotate(0) translateY(-50%);
+	}
+}
+
+@keyframes open {
+	0% {
+		-webkit-transform: scale(0) rotate(0);
+		        transform: scale(0) rotate(0);
+	}
+	
+	25% {
+		-webkit-transform: scale(0.25) rotate(1080deg) translateY(-50%);
+		        transform: scale(0.25) rotate(1080deg) translateY(-50%);
+	}
+	
+	50% {
+		-webkit-transform: scale(0.5) rotate(720deg) translateY(-50%);
+		        transform: scale(0.5) rotate(720deg) translateY(-50%);
+	}
+	
+	75% {
+		-webkit-transform: scale(0.75) rotate(360deg) translateY(-50%);
+		        transform: scale(0.75) rotate(360deg) translateY(-50%);
+	}
+	
+	90% {
+		-webkit-transform: scale(1.1) rotate(0) translateY(-50%);
+		        transform: scale(1.1) rotate(0) translateY(-50%);
+	}
+	
+	100% {
+		-webkit-transform: scale(1) rotate(0) translateY(-50%);
+		        transform: scale(1) rotate(0) translateY(-50%);
+	}
+}
+
+@-webkit-keyframes error {
+	0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes error {
+	0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
 
 /* ==========  страница CATALOG.HTML  ========== */

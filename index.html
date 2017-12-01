@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
 	<link rel="stylesheet" href="css/normalize.css">
-  	<link rel="stylesheet" href="css/style.css">
+  	<link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
 	<!--
@@ -274,11 +274,11 @@
 						<h2>Контакты</h2>
 						<p class="contact-right">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. 
 						Всякое бывает.</p>
-						<a class="open-map-big" id="modal-map-open" href="map.html">
+						<a class="open-map-big" href="map.html">
 							<img src="img/map.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="560" height="222"
 							title="Открыть карту" tabindex="0">
 						</a>
-						<a class="company-contact-button button-link active-effects-yellow" id="modal-write-us-open" href="writeus.html">напишите нам</a>
+						<a class="company-contact-button button-link active-effects-yellow open-write-us" href="writeus.html">напишите нам</a>
 					</section>
 				</section>
 				
@@ -329,15 +329,25 @@
 		</div>
 	</footer>
 	
+	<!-- модальное окно КАРТА -->
+		<section class="modal modal-map">
+			<h2 class="visually-hidden">Как до нас добраться</h2>
+			<iframe class="modal-map-img" src="https://yandex.ru/map-widget/v1/-/CBafiDamXD" width="960" height="559"></iframe>
+			<p>
+				<img src="img/map-big.jpg" alt="Как к нам пройти: г. Москва, ул. Строителей, 15" width="960" height="559">
+			</p>
+			<button class="modal-close close-map" type="button" title="закрыть окно">Закрыть</button>
+		</section>
+	
 	<!-- модальное окно НАПИШИТЕ НАМ -->
-		<section class="modal modal-write-us" id="modal-write-us-id">
+		<section class="modal modal-write-us">
 			<h2 class="visually-hidden">Напишите нам</h2>			
 			<form class="write-us" action="#" method="post">
 				<div>
 					<p class="field-group">
 						<label for="user-name">Ваше имя:</label>
 						<input type="text" name="user-name" id="user-name" 
-						placeholder="Представьтесь, пожалуйста" aria-required="true" autofocus>
+						placeholder="Представьтесь, пожалуйста" aria-required="true">
 					</p>
 					<p class="field-group">
 						<label for="user-email">Ваш e-mail:</label>
@@ -350,17 +360,10 @@
 				</p>
 				<button class="button-link active-effects-yellow" type="submit">Отправить</button>
 			</form>
-			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
+			<button class="modal-close close-write-us" type="button" title="закрыть окно">Закрыть</button>
 		</section>
 		
-		<!-- модальное окно КАРТА -->
-		<section class="modal modal-map" id="modal-map-id">
-			<h2 class="visually-hidden">Как до нас добраться</h2>
-			<iframe class="modal-map-img" src="https://yandex.ru/map-widget/v1/-/CBafiDamXD" width="960" height="559"></iframe>
-			<button class="modal-close" type="button" title="закрыть окно">Закрыть</button>
-		</section>
-
-	<script src="js/script.js"></script>
+	<script src="js/script.min.js"></script>
 	
   </body>
 </html>
