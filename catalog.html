@@ -17,8 +17,8 @@
 				<form class="header-search-form" action="#" method="post">
 					<p class="search-group">
 						<label class="visually-hidden" for="header-search">Поиск по сайту</label>
-						<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
-						<input type="submit" value="Найти">
+						<input class="header-search-search" type="search" name="search" id="header-search" placeholder="Поиск по сайту">
+						<input class="header-search-btn" type="submit" value="Найти">
 					</p>
 				</form>
 				<div class="header-top-panel-navigation">
@@ -37,25 +37,27 @@
 			
 			<nav class="header-main-navigation">
 				<ul class="site-nav">
-					<li><a class="active-effects-black" href="#" aria-haspopup="true">Каталог товаров</a><span></span>
-						
-						<div class="main-navigation-sub-menu">
-							<ul class="sub-menu-column-1">
-								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Виртуальная реальность</a></li>
-								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Моноподы для селфи</a></li>
-								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Экшн-камеры</a></li>
-							</ul>
-							<ul class="sub-menu-column-2">
-								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Фитнес-браслеты</a></li>
-								<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Умные часы</a></li>
-							</ul>
-							<ul class="sub-menu-column-3">
-								<li>
-									<a class="active-effects-black" href="catalog.html" tabindex="-1">Квадрокоптеры</a>
-								</li>
-							</ul>
-						</div>
-					</li>
+					<ul class="site-nav">
+						<li class="parent-sub-menu"><a class="active-effects-black" href="#" aria-haspopup="true">Каталог товаров</a><span></span>
+							
+							<div class="main-navigation-sub-menu">
+								<ul class="sub-menu-column-1">
+									<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Виртуальная реальность</a></li>
+									<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Моноподы для селфи</a></li>
+									<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Экшн-камеры</a></li>
+								</ul>
+								<ul class="sub-menu-column-2">
+									<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Фитнес-браслеты</a></li>
+									<li><a class="active-effects-black" href="catalog.html" tabindex="-1">Умные часы</a></li>
+								</ul>
+								<ul class="sub-menu-column-3">
+									<li>
+										<a class="active-effects-black" href="catalog.html" tabindex="-1">Квадрокоптеры</a>
+									</li>
+								</ul>
+							</div>
+							
+						</li>
 					<li><a class="active-effects-black" href="#">Доставка</a></li>
 					<li><a class="active-effects-black" href="#">Гарантия</a></li>
 					<li><a class="active-effects-black" href="#">Контакты</a></li>
@@ -95,13 +97,13 @@
 			<div class="catalog-decor-header-sorting">
 				<p>сортировка:</p>
 				<ul class="catalog-sorting">
-					<li><a class="sorting-by-price page-current" href="#">По цене</a></li>
-					<li><a class="sorting-by-type" href="#">По типу</a></li>
-					<li><a class="sorting-by-popular" href="#">По популярности</a></li>
+					<li class="catalog-sorting-criterion"><a class="sorting-by-price page-current" href="#">По цене</a></li>
+					<li class="catalog-sorting-criterion"><a class="sorting-by-type" href="#">По типу</a></li>
+					<li class="catalog-sorting-criterion"><a class="sorting-by-popular" href="#">По популярности</a></li>
 				</ul>
 				<ul class="catalog-sorting-direct">
-					<li><a class="sorting-direction arrow-up" title="сортировать по возрастанию" href="#">сортировать по возрастанию</a></li>
-					<li><a class="sorting-direction arrow-down page-current" title="сортировать по убыванию" href="#">сортировать по убыванию</a></li>
+					<li class="catalog-sorting-criterion"><a class="sorting-direction arrow-up" title="сортировать по возрастанию" href="#">сортировать по возрастанию</a></li>
+					<li class="catalog-sorting-criterion"><a class="sorting-direction arrow-down page-current" title="сортировать по убыванию" href="#">сортировать по убыванию</a></li>
 				</ul>
 			</div>
 		</div>		
@@ -297,8 +299,8 @@
 						<li class="back-forward">
 							<a href="#">назад</a>
 						</li>
-						<li class="page-number page-current" aria-current="page">
-							<a>1</a>
+						<li class="page-number" aria-current="page">
+							<a class="page-current">1</a>
 						</li>
 						<li class="page-number">
 							<a href="#">2</a>
